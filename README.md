@@ -1,6 +1,6 @@
 # iPing
 Android app iPing-Linux 监控
 
-![image](doc/1.png =324x576) ![image](doc/2.png =324x576)
-
-![image3](doc/3.png =324x576)
+<img src="doc/1.png" width = "30%" />
+<img src="doc/2.png" width = "30%" />
+<img src="doc/3.png" width = "30%" />
