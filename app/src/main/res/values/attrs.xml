@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SmoothCheckBox">
+        <attr name="duration" format="integer" />
+        <attr name="stroke_width" format="dimension" />
+        <attr name="color_tick" format="color" />
+        <attr name="color_checked" format="color" />
+        <attr name="color_unchecked" format="color" />
+        <attr name="color_unchecked_stroke" format="color" />
+    </declare-styleable>
+    <declare-styleable name="MaterialLockView">
+        <attr name="LOCK_COLOR" format="color" />
+        <attr name="WRONG_COLOR" format="color" />
+        <attr name="CORRECT_COLOR" format="color" />
+    </declare-styleable>
+    <declare-styleable name="TextViewExpandableAnimation">
+        <attr name="tvea_expandLines" format="integer" />
+        <attr name="tvea_shrinkBitmap" format="reference" />
+        <attr name="tvea_expandBitmap" format="reference" />
+        <attr name="tvea_textStateColor" format="color" />
+        <attr name="tvea_textContentColor" format="color" />
+        <attr name="tvea_textContentSize" format="dimension" />
+        <attr name="tvea_textShrink" format="string" />
+        <attr name="tvea_textExpand" format="string" />
+    </declare-styleable>
+</resources>

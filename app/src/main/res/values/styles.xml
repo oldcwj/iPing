@@ -1,0 +1,49 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--<style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />-->
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.ActionBar" />
+
+    <!--<style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />-->
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AnymeTheme.Light.AppBarOverlay" parent="AppTheme.AppBarOverlay" />
+
+    <style name="AnymeTheme.Light.PopupOverlay" parent="AppTheme.PopupOverlay" />
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AnymeTheme.Light" parent="AppTheme.NoActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorSecondary">@color/silver</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="AnymeTheme.Light.NoTranslucent" parent="AnymeTheme.Light">
+        <item name="android:windowIsTranslucent">false</item>
+    </style>
+
+
+    <style name="AnymeTheme.Transparent" parent="AnymeTheme.Light">
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+
+    <style name="AnymeTheme.Transparent.Fullscreen" parent="AnymeTheme.Transparent">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

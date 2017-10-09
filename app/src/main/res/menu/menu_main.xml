@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.wpapper.iping.ui.main.MainActivity">
+    <item
+        android:id="@+id/action_setting"
+        android:title="Add"
+        android:icon="@drawable/ic_add_white_36dp"
+        app:showAsAction="always" />
+</menu>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">iPing</string>
+
+    <string name="hub_committing">正在提交</string>
+    <string name="hub_loading">请稍等</string>
+</resources>

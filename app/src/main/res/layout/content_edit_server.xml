@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.wpapper.iping.ui.setting.SettingServerActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:showIn="@layout/activity_edit_server">
+
+    <include layout="@layout/including_divider" />
+
+    <LinearLayout
+        android:id="@+id/genderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Name"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/nameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:background="@color/transparent"
+            android:maxLines="1"
+            android:hint="name"
+            android:textColor="@color/text_hint"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/including_line_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="16dp" />
+
+    <LinearLayout
+        android:id="@+id/hostLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Host"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/hostTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:maxLines="1"
+            android:hint="Host"
+            android:background="@color/transparent"
+            android:textColor="@color/text_hint"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/including_line_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="16dp" />
+
+    <LinearLayout
+        android:id="@+id/portLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Port"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/portTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:maxLines="1"
+            android:hint="Port"
+            android:background="@color/transparent"
+            android:textColor="@color/text_hint"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/including_line_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="16dp" />
+
+    <LinearLayout
+        android:id="@+id/userNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Username"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/userNameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:maxLines="1"
+            android:hint="Username"
+            android:background="@color/transparent"
+            android:textColor="@color/text_hint"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/including_line_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="16dp" />
+
+    <LinearLayout
+        android:id="@+id/passwordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Password"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/passwordTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:maxLines="1"
+            android:hint="Password"
+            android:background="@color/transparent"
+            android:textColor="@color/text_hint"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/including_line_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="16dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whitesmoke" />
+
+</LinearLayout>

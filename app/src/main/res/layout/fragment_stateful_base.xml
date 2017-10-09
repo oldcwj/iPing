@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.gturedi.views.StatefulLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/statefulLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:stfAnimationEnabled="false"
+    app:stfInAnimation="@android:anim/fade_in"
+    app:stfOutAnimation="@android:anim/fade_out">
+
+    <FrameLayout
+        android:id="@+id/statefulViewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</com.gturedi.views.StatefulLayout>
+
