@@ -8,11 +8,7 @@
         <attr name="color_unchecked" format="color" />
         <attr name="color_unchecked_stroke" format="color" />
     </declare-styleable>
-    <declare-styleable name="MaterialLockView">
-        <attr name="LOCK_COLOR" format="color" />
-        <attr name="WRONG_COLOR" format="color" />
-        <attr name="CORRECT_COLOR" format="color" />
-    </declare-styleable>
+
     <declare-styleable name="TextViewExpandableAnimation">
         <attr name="tvea_expandLines" format="integer" />
         <attr name="tvea_shrinkBitmap" format="reference" />
