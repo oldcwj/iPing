@@ -2,17 +2,14 @@ package com.wpapper.iping.ui.utils
 
 import android.text.TextUtils
 import android.util.Log
-import com.simplemobiletools.commons.extensions.areDigitsOnly
 import com.simplemobiletools.commons.models.FileDirItem
 import com.wpapper.iping.model.SshInfo
-import com.wpapper.iping.ui.utils.exts.config
 import net.schmizz.sshj.AndroidConfig
 import net.schmizz.sshj.SSHClient
 import net.schmizz.sshj.common.IOUtils
 import net.schmizz.sshj.transport.verification.PromiscuousVerifier
 import java.util.concurrent.TimeUnit
-import net.schmizz.sshj.common.LoggerFactory
-import net.schmizz.sshj.common.StreamCopier
+import net.schmizz.sshj.xfer.FileSystemFile
 import java.util.ArrayList
 
 /**
@@ -28,7 +25,7 @@ class SSHManager {
 
     fun ssh(sshInfo: SshInfo): String {
         val ssh = SSHClient(AndroidConfig())
-        var value: String = "AA"
+        var value = "AA"
         try {
             ssh.addHostKeyVerifier(PromiscuousVerifier());
             ssh.connect(sshInfo.host, sshInfo.port)
@@ -108,42 +105,78 @@ class SSHManager {
         return files
     }
 
-    fun test(sshInfo: SshInfo) {
+    fun scpDownload(sshInfo: SshInfo, localPath: String, remotePath: String) {
         val ssh = SSHClient(AndroidConfig())
-        var value: String = "AA"
         try {
             ssh.addHostKeyVerifier(PromiscuousVerifier());
             ssh.connect(sshInfo.host, sshInfo.port)
             ssh.authPassword(sshInfo.username, sshInfo.password)
-            val session = ssh.startSession()
-            try {
-                session.allocateDefaultPTY()
 
-                val shell = session.startShell()
-
-                StreamCopier(shell.inputStream, System.out, LoggerFactory.DEFAULT)
-                        .bufSize(shell.localMaxPacketSize)
-                        .spawn("stdout")
-
-                StreamCopier(shell.errorStream, System.err, LoggerFactory.DEFAULT)
-                        .bufSize(shell.localMaxPacketSize)
-                        .spawn("stderr")
-
-                // Now make System.in act as stdin. To exit, hit Ctrl+D (since that results in an EOF on System.in)
-                // This is kinda messy because java only allows console input after you hit return
-                // But this is just an example... a GUI app could implement a proper PTY
-                StreamCopier(System.`in`, shell.outputStream, LoggerFactory.DEFAULT)
-                        .bufSize(shell.remoteMaxPacketSize)
-                        .copy()
-
-            } finally {
-                session.close()
-            }
+            ssh.newSCPFileTransfer().download(remotePath, FileSystemFile(localPath));
         } catch (e: Exception) {
             e.printStackTrace()
         } finally {
             ssh.disconnect()
         }
+    }
 
+    fun scpDownload(sshInfo: SshInfo, localPath: String, remotePath: List<String>) {
+        val ssh = SSHClient(AndroidConfig())
+        try {
+            ssh.addHostKeyVerifier(PromiscuousVerifier());
+            ssh.connect(sshInfo.host, sshInfo.port)
+            ssh.authPassword(sshInfo.username, sshInfo.password)
+
+            remotePath.forEach {
+                Log.i("download", "it=" + it + ":localPaht=" + localPath)
+                ssh.newSCPFileTransfer().download(it, FileSystemFile(localPath));
+            }
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        } finally {
+            ssh.disconnect()
+        }
+    }
+
+    fun scpUpload(sshInfo: SshInfo, localPath: String, remotePath: String) {
+        val ssh = SSHClient(AndroidConfig())
+        try {
+            ssh.addHostKeyVerifier(PromiscuousVerifier());
+            ssh.connect(sshInfo.host, sshInfo.port)
+            ssh.authPassword(sshInfo.username, sshInfo.password)
+
+            // Present here to demo algorithm renegotiation - could have just put this before connect()
+            // Make sure JZlib is in classpath for this to work
+            ssh.useCompression();
+
+            ssh.newSCPFileTransfer().upload(FileSystemFile(localPath), remotePath);
+        } catch (e: Exception) {
+            e.printStackTrace()
+        } finally {
+            ssh.disconnect()
+        }
+    }
+
+    fun scpUpload(sshInfo: SshInfo, localPath: List<String>, remotePath: String) {
+        val ssh = SSHClient(AndroidConfig())
+        try {
+            ssh.addHostKeyVerifier(PromiscuousVerifier());
+            ssh.connect(sshInfo.host, sshInfo.port)
+            ssh.authPassword(sshInfo.username, sshInfo.password)
+
+            // Present here to demo algorithm renegotiation - could have just put this before connect()
+            // Make sure JZlib is in classpath for this to work
+            ssh.useCompression();
+
+            localPath.forEach {
+                ssh.newSCPFileTransfer().upload(FileSystemFile(it), remotePath)
+            }
+
+        } catch (e: Exception) {
+            e.printStackTrace()
+        } finally {
+            ssh.disconnect()
+        }
     }
 }

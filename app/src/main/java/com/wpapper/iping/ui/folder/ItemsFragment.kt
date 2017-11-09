@@ -45,6 +45,8 @@ class ItemsFragment : Fragment(), ItemsAdapter.ItemOperationsListener, Breadcrum
 
     private lateinit var mView: View
 
+    var host = ""
+
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View {
         mView = inflater!!.inflate(R.layout.items_fragment, container, false)!!
         storeConfigVariables()
@@ -185,7 +187,7 @@ class ItemsFragment : Fragment(), ItemsAdapter.ItemOperationsListener, Breadcrum
             }
             */
             Log.i("path=====", path)
-            var sshInfo = DataSave(activity).getData("192.168.20.109")
+            var sshInfo = DataSave(activity).getData(host)
             if (sshInfo != null) {
                 callback(SSHManager.newInstance().sshLs(sshInfo, path))
             }

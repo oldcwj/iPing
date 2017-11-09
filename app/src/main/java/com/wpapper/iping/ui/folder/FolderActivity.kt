@@ -20,6 +20,7 @@ import com.wpapper.iping.R
 import com.wpapper.iping.base.annotation.Backable
 import com.wpapper.iping.ui.dialogs.ChangeSortingDialog
 import com.wpapper.iping.ui.helpers.RootHelpers
+import com.wpapper.iping.ui.setting.SettingServerActivity
 import com.wpapper.iping.ui.utils.exts.config
 
 import kotlinx.android.synthetic.main.folder_detail.*
@@ -49,6 +50,8 @@ class FolderActivity : SimpleActivity() {
         setContentView(R.layout.activity_folder)
         storeStoragePaths()
 
+        host = intent.getStringExtra(SettingServerActivity.KEY_HOST)
+
         findOptional<Toolbar>(R.id.toolbar)?.apply {
             setSupportActionBar(this)
             if (this@FolderActivity::class.java.isAnnotationPresent(Backable::class.java)) {
@@ -62,6 +65,7 @@ class FolderActivity : SimpleActivity() {
         val allowPickingMultiple = intent.getBooleanExtra(Intent.EXTRA_ALLOW_MULTIPLE, false)
         fragment.isGetContentIntent = isGetContentIntent
         fragment.isPickMultipleIntent = allowPickingMultiple
+        fragment.host = host
 
         tryInitFileManager()
         checkIfRootAvailable()

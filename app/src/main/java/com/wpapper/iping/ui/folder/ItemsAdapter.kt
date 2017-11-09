@@ -6,8 +6,10 @@ import android.content.Context
 import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.os.Build
+import android.os.Environment
 import android.support.v7.view.ActionMode
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.util.SparseArray
 import android.view.*
 import com.bignerdranch.android.multiselector.ModalMultiSelectorCallback
@@ -28,6 +30,8 @@ import com.stericson.RootTools.RootTools
 import com.wpapper.iping.ui.dialogs.CompressAsDialog
 import com.wpapper.iping.BuildConfig.APPLICATION_ID
 import com.wpapper.iping.R
+import com.wpapper.iping.model.DataSave
+import com.wpapper.iping.ui.utils.SSHManager
 import com.wpapper.iping.ui.utils.exts.*
 
 import kotlinx.android.synthetic.main.list_item.view.*
@@ -38,6 +42,7 @@ import java.util.*
 import java.util.zip.ZipEntry
 import java.util.zip.ZipFile
 import java.util.zip.ZipOutputStream
+import kotlin.collections.ArrayList
 
 class ItemsAdapter(val activity: SimpleActivity, var mItems: MutableList<FileDirItem>, val listener: ItemOperationsListener?, val isPickMultipleIntent: Boolean,
                    val itemClick: (FileDirItem) -> Unit) : RecyclerView.Adapter<ItemsAdapter.ViewHolder>() {
@@ -218,18 +223,14 @@ class ItemsAdapter(val activity: SimpleActivity, var mItems: MutableList<FileDir
 
     private fun copyMoveTo(isCopyOperation: Boolean) {
         val files = ArrayList<File>()
+        val filesPath = ArrayList<String>()
         selectedPositions.forEach { files.add(File(mItems[it].path)) }
+        selectedPositions.forEach { filesPath.add((mItems[it].path)) }
 
-        val source = if (files[0].isFile) files[0].parent else files[0].absolutePath
+        val source = Environment.getExternalStorageDirectory().toString()
         FilePickerDialog(activity, source, false, config.shouldShowHidden, true) {
-            if (activity.isPathOnRoot(source)) {
-                copyRootItems(files, it)
-            } else {
-                activity.copyMoveFilesTo(files, source, it, isCopyOperation, false) {
-                    listener?.refreshItems()
-                    actMode?.finish()
-                }
-            }
+            Log.i("source", source)
+            copyRootItemsScp(filesPath, it)
         }
     }
 
@@ -241,6 +242,33 @@ class ItemsAdapter(val activity: SimpleActivity, var mItems: MutableList<FileDir
                 if (RootTools.copyFile(it.absolutePath, destinationPath, false, true)) {
                     fileCnt--
                 }
+            }
+
+            when {
+                fileCnt <= 0 -> activity.toast(R.string.copying_success)
+                fileCnt == files.count() -> activity.toast(R.string.copy_failed)
+                else -> activity.toast(R.string.copying_success_partial)
+            }
+
+            activity.runOnUiThread {
+                listener?.refreshItems()
+                actMode?.finish()
+            }
+        }).start()
+    }
+
+    private fun copyRootItemsScp(files: ArrayList<String>, destinationPath: String) {
+        activity.toast(R.string.copying)
+        Thread({
+            var fileCnt = files.count()
+
+            var host = ""
+            if (activity is FolderActivity) {
+                host = activity.host
+            }
+            var sshInfo = DataSave(activity).getData(host)
+            if (sshInfo != null) {
+                SSHManager.newInstance().scpDownload(sshInfo, destinationPath, files)
             }
 
             when {
