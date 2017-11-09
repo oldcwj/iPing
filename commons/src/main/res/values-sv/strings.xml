@@ -1,0 +1,256 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Avbryt</string>
+    <string name="search">Sök</string>
+    <string name="save_as">Spara som</string>
+    <string name="file_saved">Filen sparad</string>
+    <string name="invalid_file_format">Ogiltigt filformat</string>
+    <string name="out_of_memory_error">Minnet är fullt</string>
+    <string name="an_error_occurred">Ett fel har uppstått: %s</string>
+    <string name="open_with">Öppna med</string>
+    <string name="no_app_found">Hittade ingen giltig app</string>
+    <string name="set_as">Ange som</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">Döp om fil</string>
+    <string name="rename_folder">Döp om mapp</string>
+    <string name="rename_file_error">Det gick inte att döpa om filen</string>
+    <string name="rename_folder_error">Det gick inte att döpa om mappen</string>
+    <string name="rename_folder_empty">Du måste ange ett mappnamn</string>
+    <string name="rename_folder_exists">En mapp med det namnet finns redan</string>
+    <string name="rename_folder_root">Det går inte att döpa om rotmappen på lagringsutrymmet</string>
+    <string name="rename_folder_ok">Mappen döptes om</string>
+    <string name="renaming_folder">Döper om mappen</string>
+    <string name="filename_cannot_be_empty">Du måste ange ett filnamn</string>
+    <string name="filename_invalid_characters">Filnamnet innehåller ogiltiga tecken</string>
+    <string name="extension_cannot_be_empty">Filändelsen får inte vara tom</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Kopiera</string>
+    <string name="move">Flytta</string>
+    <string name="copy_move">Kopiera / Flytta</string>
+    <string name="copy_to">Kopiera till</string>
+    <string name="move_to">Flytta till</string>
+    <string name="source">Källa</string>
+    <string name="destination">Mål</string>
+    <string name="select_destination">Välj mål</string>
+    <string name="click_select_destination">Tryck här för att välja mål</string>
+    <string name="invalid_destination">Det gick inte att skriva till målet</string>
+    <string name="please_select_destination">Välj mål</string>
+    <string name="source_and_destination_same">Källa och mål kan inte vara samma</string>
+    <string name="copy_failed">Kunde inte kopiera filen</string>
+    <string name="copying">Kopierar&#8230;</string>
+    <string name="copying_success">Filerna har kopierats</string>
+    <string name="copy_move_failed">Ett fel har uppstått</string>
+    <string name="moving">Flyttar&#8230;</string>
+    <string name="moving_success">Filerna har flyttats</string>
+    <string name="moving_success_partial">Några filer gick inte att flytta</string>
+    <string name="copying_success_partial">Några filer gick inte att kopiera</string>
+    <string name="no_files_selected">Inga filer markerade</string>
+    <string name="saving">Sparar&#8230;</string>
+    <string name="could_not_create_folder">Kunde inte skapa mappen %s</string>
+    <string name="could_not_create_file">Kunde inte skapa filen %s</string>
+
+    <!-- Create new -->
+    <string name="create_new">Skapa ny</string>
+    <string name="folder">Mapp</string>
+    <string name="file">Fil</string>
+    <string name="create_new_folder">Skapa ny mapp</string>
+    <string name="name_taken">Katalogen eller filen finns redan med det namnet</string>
+    <string name="invalid_name">Namnet innehåller ogiltiga tecken</string>
+    <string name="empty_name">Ange ett namn</string>
+    <string name="unknown_error_occurred">Ett okänt fel har uppstått</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">Filen %1$s finns redan</string>
+    <string name="file_already_exists_overwrite">Filen %1$s finns redan. Skriv över?</string>
+    <string name="select_an_action">Välj en åtgärd</string>
+    <string name="overwrite">Skriv över</string>
+    <string name="skip">Hoppa över</string>
+    <string name="append">Bifoga med \'_1\'</string>
+    <string name="apply_to_all">Använd på alla konflikter</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Välj mapp</string>
+    <string name="select_file">Välj fil</string>
+    <string name="confirm_storage_access_title">Bekräfta extern åtkomstlagring</string>
+    <string name="confirm_storage_access_text">Välj rotmappen på ditt SD-kort på nästa skärmbild, för att bevilja skrivrättigheter</string>
+    <string name="confirm_storage_access_text_sd">Om du inte ser SD-kortet, prova detta</string>
+    <string name="confirm_selection">Confirm selection</string>
+
+    <plurals name="items">
+        <item quantity="one">%1$d objekt</item>
+        <item quantity="other">%1$d objekt</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Välj lagringsplats</string>
+    <string name="internal">Internt</string>
+    <string name="sd_card">SD-kort</string>
+    <string name="root">Rot</string>
+    <string name="wrong_root_selected">Du har valt fel mapp, välj rotmappen på ditt SD-kort</string>
+
+    <!-- File properties -->
+    <string name="properties">Egenskaper</string>
+    <string name="path">Sökväg</string>
+    <string name="items_selected">Valda objekt</string>
+    <string name="direct_children_count">Antal direkta döttrar</string>
+    <string name="files_count">Antalet filer</string>
+    <string name="resolution">Upplösning</string>
+    <string name="duration">Varaktighet</string>
+    <string name="artist">Artist</string>
+    <string name="album">Album</string>
+    <string name="focal_length">Brännvidd</string>
+    <string name="exposure_time">Exponeringstid</string>
+    <string name="iso_speed">ISO-grader</string>
+    <string name="f_number">F-nummer</string>
+    <string name="camera">Kamera</string>
+    <string name="exif">EXIF</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Bakgrundsfärg</string>
+    <string name="text_color">Textfärg</string>
+    <string name="primary_color">Primär färg</string>
+    <string name="restore_defaults">Återställ förvalda värden</string>
+    <string name="theme">Tema</string>
+    <string name="light_theme">Ljust tema</string>
+    <string name="dark_theme">Mörkt tema</string>
+    <string name="custom">Eget</string>
+    <string name="changing_color_description">Om du ändrar en färg, byter den till eget tema</string>
+    <string name="save">Spara</string>
+    <string name="discard">Avbryt</string>
+    <string name="undo_changes">Ångra ändringar</string>
+    <string name="undo_changes_confirmation">Är du säker på att du vill ångra dina ändringar?</string>
+    <string name="save_before_closing">Du har ändringar som inte är sparade. Spara innan du lämnar?</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Vad är nytt</string>
+    <string name="whats_new_disclaimer">* endast de största uppdateringarna är listade här, det görs alltid också en massa småändringar</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Ta bort</string>
+    <string name="rename">Döp om</string>
+    <string name="share">Dela</string>
+    <string name="share_via">Dela via</string>
+    <string name="select_all">Välj alla</string>
+    <string name="hide">Dölj</string>
+    <string name="unhide">Visa</string>
+    <string name="hide_folder">Dölj mapp</string>
+    <string name="unhide_folder">Visa mapp</string>
+    <string name="temporarily_show_hidden">Visa dolda objekt tillfälligt</string>
+    <string name="stop_showing_hidden">Sluta visa dolda objekt</string>
+    <string name="maximum_share_reached">You cannot share this much content at once</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Sortera efter</string>
+    <string name="name">Namn</string>
+    <string name="size">Storlek</string>
+    <string name="last_modified">Senast ändrad</string>
+    <string name="date_taken">Datum</string>
+    <string name="title">Titel</string>
+    <string name="filename">Filnamn</string>
+    <string name="extension">Filändelse</string>
+    <string name="ascending">Stigande</string>
+    <string name="descending">Fallande</string>
+    <string name="use_for_this_folder">Använd bara för denna mapp</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Är du säker på att du vill ta bort detta?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nej</string>
+
+    <!-- Password protection -->
+    <string name="pin">PIN-kod</string>
+    <string name="enter_pin">Ange PIN-kod</string>
+    <string name="please_enter_pin">Ange en PIN-kod</string>
+    <string name="wrong_pin">Du har angett fel PIN-kod</string>
+    <string name="repeat_pin">Upprepa PIN-kod</string>
+    <string name="pattern">Mönster</string>
+    <string name="insert_pattern">Rita mönster</string>
+    <string name="wrong_pattern">Du har ritat fel mönster</string>
+    <string name="repeat_pattern">Upprepa mönster</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="add_fingerprint">Add fingerprint</string>
+    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
+    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="protection_setup_successfully">Lösenordet har ställts in. Installera om appen om du glömmer bort det.</string>
+    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+
+    <!-- Times -->
+    <plurals name="seconds">
+        <item quantity="one">%1$d sekund</item>
+        <item quantity="other">%1$d sekunder</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d minut</item>
+        <item quantity="other">%1$d minuter</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d timme</item>
+        <item quantity="other">%1$d timmar</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="settings">Inställningar</string>
+    <string name="customize_colors">Egna färger</string>
+    <string name="use_english_language">Use english language</string>
+    <string name="show_hidden">Visa dolda filer</string>
+    <string name="font_size">Teckenstorlek</string>
+    <string name="small">Liten</string>
+    <string name="medium">Medelstor</string>
+    <string name="large">Stor</string>
+    <string name="extra_large">Extra stor</string>
+    <string name="password_protect_hidden_items">Lösenordsskydda synligheten för dolda objekt</string>
+    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
+
+    <!-- About -->
+    <string name="about">Om</string>
+    <string name="website_label">Fler enkla appar och källkod här</string>
+    <string name="email_label">Skicka feedback och förslag till</string>
+    <string name="more_apps_underlined"><u>Fler appar</u></string>
+    <string name="third_party_licences_underlined"><u>Tredjepartslicenser</u></string>
+    <string name="invite_friends_underlined"><u>Bjud in vänner</u></string>
+    <string name="share_text">Hej, ta en titt på %1$s vid %2$s</string>
+    <string name="invite_via">Inbjudan via</string>
+    <string name="rate_us_underlined"><u>Betygsätt oss i Play Butiken</u></string>
+    <string name="donate">Donera</string>
+    <string name="donate_underlined"><u>Donera</u></string>
+    <string name="follow_us">Följ oss</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">Ytterligare info</string>
+    <string name="gruveo">Letar du efter en enkel app för anonyma videosamtal? Prova mitt andra projekt</string>
+    <string name="app_version">Appversion: %1$s</string>
+    <string name="device_os">Enhetens operativsystem: %1$s</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
+
+    <!-- License -->
+    <string name="notice">Denna app använder följande tredjepartsbibliotek för att göra mitt liv enklare. Tack.</string>
+    <string name="third_party_licences">Tredjepartslicenser</string>
+    <string name="kotlin_title">Kotlin (programmeringsspråk)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (zoombara bildvyer)</string>
+    <string name="glide_title">Glide (inläsning och cachning av bilder)</string>
+    <string name="picasso_title">Picasso (inläsning och cachning av bilder)</string>
+    <string name="cropper_title">Android Image Cropper (beskärning och rotering av bilder)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (markering av flera listobjekt)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (höger-till-vänster-svepning)</string>
+    <string name="joda_title">Joda-Time (ersättning för Javas datumklass)</string>
+    <string name="stetho_title">Stetho (avlusning av databaser)</string>
+    <string name="otto_title">Otto (händelsebuss)</string>
+    <string name="photoview_title">PhotoView (zoombara GIF-bilder)</string>
+    <string name="pattern_title">PatternLockView (mönsterlås)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+</resources>

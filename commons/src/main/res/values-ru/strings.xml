@@ -1,0 +1,258 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Отмена</string>
+    <string name="search">Поиск</string>
+    <string name="save_as">Сохранить как</string>
+    <string name="file_saved">Файл успешно сохранён</string>
+    <string name="invalid_file_format">Недопустимый формат файла</string>
+    <string name="out_of_memory_error">Память переполнена</string>
+    <string name="an_error_occurred">Произошла ошибка: %s</string>
+    <string name="open_with">Открыть в</string>
+    <string name="no_app_found">Приложение не найдено</string>
+    <string name="set_as">Установить как</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">Изменение имени файла</string>
+    <string name="rename_folder">Изменение имени папки</string>
+    <string name="rename_file_error">Невозможно переименовать файл</string>
+    <string name="rename_folder_error">Невозможно переименовать папку</string>
+    <string name="rename_folder_empty">Имя папки не должно быть пустым</string>
+    <string name="rename_folder_exists">Папка с таким именем уже существует</string>
+    <string name="rename_folder_root">Невозможно переименовать корневую папку</string>
+    <string name="rename_folder_ok">Папка переименована успешно</string>
+    <string name="renaming_folder">Изменение имени папки</string>
+    <string name="filename_cannot_be_empty">Имя файла не может быть пустым</string>
+    <string name="filename_invalid_characters">Имя файла содержит недопустимые символы</string>
+    <string name="extension_cannot_be_empty">Расширение не может быть пустым</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Копировать</string>
+    <string name="move">Переместить</string>
+    <string name="copy_move">Копировать/переместить</string>
+    <string name="copy_to">Копировать в</string>
+    <string name="move_to">Переместить в</string>
+    <string name="source">Путь источника</string>
+    <string name="destination">Путь назначения</string>
+    <string name="select_destination">Выберите путь назначения</string>
+    <string name="click_select_destination">Нажмите здесь, чтобы выбрать расположение</string>
+    <string name="invalid_destination">Не удалось записать в выбранное расположение</string>
+    <string name="please_select_destination">Пожалуйста, выберите путь назначения</string>
+    <string name="source_and_destination_same">Исходный и конечный пути не могут совпадать</string>
+    <string name="copy_failed">Не удалось скопировать файлы</string>
+    <string name="copying">Копирование&#8230;</string>
+    <string name="copying_success">Файлы скопированы успешно</string>
+    <string name="copy_move_failed">Произошла ошибка</string>
+    <string name="moving">Перемещение&#8230;</string>
+    <string name="moving_success">Файлы успешно перемещены</string>
+    <string name="moving_success_partial">Некоторые файлы не могут быть перемещены</string>
+    <string name="copying_success_partial">Некоторые файлы не могут быть скопированы</string>
+    <string name="no_files_selected">Файлы не выбраны</string>
+    <string name="saving">Сохранение&#8230;</string>
+    <string name="could_not_create_folder">Не удалось создать папку %s</string>
+    <string name="could_not_create_file">Не удалось создать файл %s</string>
+
+    <!-- Create new -->
+    <string name="create_new">Создать</string>
+    <string name="folder">Папку</string>
+    <string name="file">Файл</string>
+    <string name="create_new_folder">Создать новую папку</string>
+    <string name="name_taken">Папка или файл с таким именем уже существует</string>
+    <string name="invalid_name">Имя содержит недопустимые символы</string>
+    <string name="empty_name">Пожалуйста, введите имя</string>
+    <string name="unknown_error_occurred">Произошла неизвестная ошибка</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">Файл %1$s уже существует</string>
+    <string name="file_already_exists_overwrite">Файл %1$s уже существует. Перезаписать?</string>
+    <string name="select_an_action">Выберите действие</string>
+    <string name="overwrite">Перезаписать</string>
+    <string name="skip">Пропустить</string>
+    <string name="append">Добавить \'_1\' к имени</string>
+    <string name="apply_to_all">Применить ко всем конфликтам</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Выбор папки</string>
+    <string name="select_file">Выбор файла</string>
+    <string name="confirm_storage_access_title">Предоставление доступа к внешнему накопителю</string>
+    <string name="confirm_storage_access_text">Чтобы предоставить право на запись, пожалуйста, выберите корневую папку SD-карты на следующем шаге</string>
+    <string name="confirm_storage_access_text_sd">Если вы не видите SD-карту, попробуйте это</string>
+    <string name="confirm_selection">Подтвердить выделение</string>
+
+    <plurals name="items">
+        <item quantity="one">%1$d объект</item>
+        <item quantity="other">объектов: %1$d</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Выбрать хранилище</string>
+    <string name="internal">Внутренняя память</string>
+    <string name="sd_card">SD-карта</string>
+    <string name="root">Корневая папка</string>
+    <string name="wrong_root_selected">Папка выбрана неверно, пожалуйста, выберите SD-карту</string>
+
+    <!-- File properties -->
+    <string name="properties">Свойства</string>
+    <string name="path">Расположение</string>
+    <string name="items_selected">Выбрано элементов</string>
+    <string name="direct_children_count">Дочерних элементов</string>
+    <string name="files_count">Всего файлов внутри</string>
+    <string name="resolution">Разрешение</string>
+    <string name="duration">Длительность</string>
+    <string name="artist">Исполнитель</string>
+    <string name="album">Альбом</string>
+    <string name="focal_length">Фокусное расстояние</string>
+    <string name="exposure_time">Выдержка</string>
+    <string name="iso_speed">Светочувствительность(ISO)</string>
+    <string name="f_number">Число диафрагмы</string>
+    <string name="camera">Камера</string>
+    <string name="exif">EXIF</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Цвет фона</string>
+    <string name="text_color">Цвет текста</string>
+    <string name="primary_color">Основной цвет</string>
+    <string name="restore_defaults">Сбросить к стандартным</string>
+    <string name="theme">Тема</string>
+    <string name="light_theme">Светлая тема</string>
+    <string name="dark_theme">Тёмная тема</string>
+    <string name="custom">Настраиваемое</string>
+    <string name="changing_color_description">Изменение цвета повлечёт переключение на пользовательскую тему.</string>
+    <string name="save">Сохранить</string>
+    <string name="discard">Сбросить</string>
+    <string name="undo_changes">Отменить изменения</string>
+    <string name="undo_changes_confirmation">Действительно отменить изменения?</string>
+    <string name="save_before_closing">У вас есть несохранённые изменения. Сохранить перед выходом?</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Что нового</string>
+    <string name="whats_new_disclaimer">* здесь представлены только значительные изменения, но всегда присутствуют и мелкие исправления</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Удалить</string>
+    <string name="rename">Переименовать</string>
+    <string name="share">Поделиться</string>
+    <string name="share_via">Отправить через</string>
+    <string name="select_all">Выделить все</string>
+    <string name="hide">Скрыть</string>
+    <string name="unhide">Показать</string>
+    <string name="hide_folder">Скрыть папку</string>
+    <string name="unhide_folder">Показать папку</string>
+    <string name="temporarily_show_hidden">Временный показ скрытых</string>
+    <string name="stop_showing_hidden">Не показывать скрытые медиа</string>
+    <string name="maximum_share_reached">Слишком большое количество контента, чтобы поделиться им</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Сортировать по</string>
+    <string name="name">Имя</string>
+    <string name="size">Размер</string>
+    <string name="last_modified">Время изменения</string>
+    <string name="date_taken">Время создания</string>
+    <string name="title">Название</string>
+    <string name="filename">Имя файла</string>
+    <string name="extension">Расширение</string>
+    <string name="ascending">По возрастанию</string>
+    <string name="descending">По убыванию</string>
+    <string name="use_for_this_folder">Использовать только для этой папки</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Действительно хотите удалить?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+
+    <!-- Password protection -->
+    <string name="pin">PIN-код</string>
+    <string name="enter_pin">Ввод PIN-кода</string>
+    <string name="please_enter_pin">Введите PIN-код</string>
+    <string name="wrong_pin">Неверный PIN-код</string>
+    <string name="repeat_pin">Повтор PIN-кода</string>
+    <string name="pattern">Графический ключ</string>
+    <string name="insert_pattern">Установить ключ</string>
+    <string name="wrong_pattern">Неверный графический ключ</string>
+    <string name="repeat_pattern">Повторить ключ</string>
+    <string name="fingerprint">Отпечаток пальца</string>
+    <string name="add_fingerprint">Добавить отпечаток</string>
+    <string name="place_finger">Пожалуйста, поместите палец на датчик отпечатков.</string>
+    <string name="authentication_failed">Ошибка аутентификации</string>
+    <string name="authentication_blocked">Аутентификация заблокирована, повторите попытку через некоторое время</string>
+    <string name="no_fingerprints_registered">У вас нет зарегистрированных отпечатков пальцев, добавьте их в настройках вашего устройства</string>
+    <string name="go_to_settings">Перейдите в настройки</string>
+    <string name="protection_setup_successfully">Пароль успешно установлен. Пожалуйста, переустановите приложение в случае, если вы его забудете.</string>
+    <string name="fingerprint_setup_successfully">Установка защиты выполнена успешно. Переустановите приложение в случае возникновения проблем с её отключением.</string>
+
+    <!-- Times -->
+    <plurals name="seconds">
+        <item quantity="one">%1$d секунда</item>
+        <item quantity="other">%1$d секунд</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d минута</item>
+        <item quantity="few">%1$d минуты</item>
+        <item quantity="many">%1$d минут</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d час</item>
+        <item quantity="few">%1$d часа</item>
+        <item quantity="many">%1$d часов</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="settings">Настройки</string>
+    <string name="customize_colors">Настроить цвета</string>
+    <string name="use_english_language">Use english language</string>
+    <string name="show_hidden">Показывать скрытые папки</string>
+    <string name="font_size">Размер шрифта</string>
+    <string name="small">Мелкий</string>
+    <string name="medium">Нормальный</string>
+    <string name="large">Крупный</string>
+    <string name="extra_large">Очень крупный</string>
+    <string name="password_protect_hidden_items">Защита паролем отображения скрытых объектов</string>
+    <string name="keep_last_modified">Сохранять значение даты изменения файла при копировании/перемещении/переименовании</string>
+
+    <!-- About -->
+    <string name="about">О приложении</string>
+    <string name="website_label">Исходный код можно найти по адресу</string>
+    <string name="email_label">Отправить отзывы или предложения</string>
+    <string name="more_apps_underlined"><u>Больше простых приложений</u></string>
+    <string name="third_party_licences_underlined"><u>Лицензии третьих сторон</u></string>
+    <string name="invite_friends_underlined"><u>Предложить другу</u></string>
+    <string name="share_text">Попробуй %1$s по ссылке %2$s</string>
+    <string name="invite_via">Предложить с помощью</string>
+    <string name="rate_us_underlined"><u>Оценить нас в Google Play</u></string>
+    <string name="donate">Поддержать разработчика</string>
+    <string name="donate_underlined"><u>Поддержать разработчика</u></string>
+    <string name="follow_us">Подписаться на нас</string>
+    <string name="copyright">v %1$s\nАвторские права © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">Дополнительная информация</string>
+    <string name="gruveo">Вы ищете простое и анонимное приложение для видеозвонков? Попробуйте мой другой проект</string>
+    <string name="app_version">Версия приложения: %1$s</string>
+    <string name="device_os">OS устройства: %1$s</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
+
+    <!-- License -->
+    <string name="notice">Это приложение использует следующие библиотеки сторонних разработчиков, чтобы облегчить мой труд. Спасибо.</string>
+    <string name="third_party_licences">Лицензии третьих сторон</string>
+    <string name="kotlin_title">Kotlin (язык программирования)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (возможность масштабирования изображений)</string>
+    <string name="glide_title">Glide (загрузка изображения и кэширование)</string>
+    <string name="picasso_title">Picasso (загрузка изображения и кэширование)</string>
+    <string name="cropper_title">Android Image Cropper (обрезка и поворот изображений)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (выбор нескольких элементов списка)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (отображение с RTL-языками)</string>
+    <string name="joda_title">Joda-Time (замена даты Java)</string>
+    <string name="stetho_title">Stetho (базы данных отладки)</string>
+    <string name="otto_title">Otto ("шина" событий)</string>
+    <string name="photoview_title">PhotoView (масштабирование GIF)</string>
+    <string name="pattern_title">PatternLockView (защита графическим ключом)</string>
+    <string name="reprint_title">Reprint (защита по отпечатку пальца)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+</resources>

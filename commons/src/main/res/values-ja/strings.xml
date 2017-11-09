@@ -1,0 +1,256 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">キャンセル</string>
+    <string name="search">検索</string>
+    <string name="save_as">名前を付けて保存</string>
+    <string name="file_saved">ファイルを正常に保存しました</string>
+    <string name="invalid_file_format">使用できないファイル形式</string>
+    <string name="out_of_memory_error">メモリー不足エラー</string>
+    <string name="an_error_occurred">エラーが発生しました: %s</string>
+    <string name="open_with">別のアプリで開く</string>
+    <string name="no_app_found">有効なアプリが見つかりません</string>
+    <string name="set_as">他で使う</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">ファイルの名前を変更</string>
+    <string name="rename_folder">フォルダーの名前を変更</string>
+    <string name="rename_file_error">ファイルの名前を変更できませんでした</string>
+    <string name="rename_folder_error">フォルダーの名前を変更できませんでした</string>
+    <string name="rename_folder_empty">フォルダー名は空にできません</string>
+    <string name="rename_folder_exists">その名前のフォルダーは既に存在します</string>
+    <string name="rename_folder_root">ストレージのルートフォルダーの名前を変更できません</string>
+    <string name="rename_folder_ok">フォルダーの名前を正常に変更しました</string>
+    <string name="renaming_folder">フォルダーの名前を変更中</string>
+    <string name="filename_cannot_be_empty">ファイル名は空にできません</string>
+    <string name="filename_invalid_characters">ファイル名に無効な文字が含まれています</string>
+    <string name="extension_cannot_be_empty">拡張子は省略できません</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">コピー</string>
+    <string name="move">移動</string>
+    <string name="copy_move">コピー / 移動</string>
+    <string name="copy_to">コピー</string>
+    <string name="move_to">移動</string>
+    <string name="source">元</string>
+    <string name="destination">先</string>
+    <string name="select_destination">宛先を選択</string>
+    <string name="click_select_destination">クリックして宛先を選択</string>
+    <string name="invalid_destination">選択した宛先に書き込みできませんでした</string>
+    <string name="please_select_destination">宛先を選択してください</string>
+    <string name="source_and_destination_same">元と先を同じにすることはできません</string>
+    <string name="copy_failed">ファイルをコピーできませんでした</string>
+    <string name="copying">コピー中&#8230;</string>
+    <string name="copying_success">ファイルを正常にコピーしました</string>
+    <string name="copy_move_failed">エラーが発生しました</string>
+    <string name="moving">移動中&#8230;</string>
+    <string name="moving_success">ファイルを正常に移動しました</string>
+    <string name="moving_success_partial">一部のファイルが移動できませんでした</string>
+    <string name="copying_success_partial">一部のファイルがコピーできませんでした</string>
+    <string name="no_files_selected">ファイルが選択されていません</string>
+    <string name="saving">保存中&#8230;</string>
+    <string name="could_not_create_folder">フォルダー %s を作成できません</string>
+    <string name="could_not_create_file">ファイル %s を作成できません</string>
+
+    <!-- Create new -->
+    <string name="create_new">新規作成</string>
+    <string name="folder">フォルダー</string>
+    <string name="file">ファイル</string>
+    <string name="create_new_folder">フォルダ新規作成</string>
+    <string name="name_taken">同名のファイルまたはフォルダーが既に存在しています</string>
+    <string name="invalid_name">名前に無効な文字が含まれています</string>
+    <string name="empty_name">名前を入力してください</string>
+    <string name="unknown_error_occurred">不明なエラーが発生しました</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">ファイル %1$s は既に存在しています</string>
+    <string name="file_already_exists_overwrite">ファイル %1$s は既に存在しています。上書きしますか?</string>
+    <string name="select_an_action">処理を選択</string>
+    <string name="overwrite">上書き</string>
+    <string name="skip">スキップ</string>
+    <string name="append">\'_1\' に追記する</string>
+    <string name="apply_to_all">すべてに適用</string>
+
+    <!-- File picker -->
+    <string name="select_folder">フォルダーを選択</string>
+    <string name="select_file">ファイルを選択</string>
+    <string name="confirm_storage_access_title">外部ストレージのアクセスを確認してください</string>
+    <string name="confirm_storage_access_text">次の画面で SD カードのルートフォルダーを選択して、書き込みアクセス許可を付与してください</string>
+    <string name="confirm_storage_access_text_sd">SD カードの内容が表示されない場合は、こちらをお試しください</string>
+    <string name="confirm_selection">Confirm selection</string>
+
+    <plurals name="items">
+        <item quantity="one">%1$d アイテム</item>
+        <item quantity="other">%1$d アイテム</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">ストレージを選択</string>
+    <string name="internal">内部</string>
+    <string name="sd_card">SD カード</string>
+    <string name="root">ルート</string>
+    <string name="wrong_root_selected">フォルダーの選択が正しくありません。SD カードを選択してください</string>
+
+    <!-- File properties -->
+    <string name="properties">プロパティ</string>
+    <string name="path">パス</string>
+    <string name="items_selected">アイテム選択</string>
+    <string name="direct_children_count">直接の子の数</string>
+    <string name="files_count">合計ファイル数</string>
+    <string name="resolution">解像度</string>
+    <string name="duration">期間</string>
+    <string name="artist">アーティスト</string>
+    <string name="album">アルバム</string>
+    <string name="focal_length">焦点距離</string>
+    <string name="exposure_time">露出時間</string>
+    <string name="iso_speed">ISO感度</string>
+    <string name="f_number">絞り値</string>
+    <string name="camera">カメラ名</string>
+    <string name="exif">EXIF</string>
+
+    <!-- Color customization -->
+    <string name="background_color">背景色</string>
+    <string name="text_color">文字色</string>
+    <string name="primary_color">メインカラー</string>
+    <string name="restore_defaults">デフォルトに戻す</string>
+    <string name="theme">テーマ</string>
+    <string name="light_theme">ライト</string>
+    <string name="dark_theme">ダーク</string>
+    <string name="custom">カスタム</string>
+    <string name="changing_color_description">色を変更すると、テーマが「カスタム」に切り替わります</string>
+    <string name="save">保存</string>
+    <string name="discard">破棄</string>
+    <string name="undo_changes">変更を元に戻す</string>
+    <string name="undo_changes_confirmation">変更を元に戻してもよろしいですか?</string>
+    <string name="save_before_closing">保存していない変更があります。保存しますか?</string>
+
+    <!-- What's new -->
+    <string name="whats_new">更新内容</string>
+    <string name="whats_new_disclaimer">* ここでは主な変更点を挙げていますが、その他の細かい改善も行われています</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">削除</string>
+    <string name="rename">名前の変更</string>
+    <string name="share">共有</string>
+    <string name="share_via">共有&#8230;</string>
+    <string name="select_all">すべて選択</string>
+    <string name="hide">非表示</string>
+    <string name="unhide">再表示</string>
+    <string name="hide_folder">フォルダーを非表示</string>
+    <string name="unhide_folder">フォルダーを再表示</string>
+    <string name="temporarily_show_hidden">非表示の項目を一時的に表示</string>
+    <string name="stop_showing_hidden">非表示項目を表示しない</string>
+    <string name="maximum_share_reached">You cannot share this much content at once</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">並び替え</string>
+    <string name="name">名前</string>
+    <string name="size">サイズ</string>
+    <string name="last_modified">最終更新日時</string>
+    <string name="date_taken">撮影日時</string>
+    <string name="title">タイトル</string>
+    <string name="filename">ファイル名</string>
+    <string name="extension">拡張子</string>
+    <string name="ascending">昇順</string>
+    <string name="descending">降順</string>
+    <string name="use_for_this_folder">このフォルダーのみに適用</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">削除を続行してもよろしいですか?</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+
+    <!-- Password protection -->
+    <string name="pin">PIN</string>
+    <string name="enter_pin">PINを入力</string>
+    <string name="please_enter_pin">PINを入力してください</string>
+    <string name="wrong_pin">PINに誤りがあります</string>
+    <string name="repeat_pin">PINを再入力</string>
+    <string name="pattern">パターン</string>
+    <string name="insert_pattern">パターンを入力</string>
+    <string name="wrong_pattern">パターンに誤りがあります</string>
+    <string name="repeat_pattern">パターンを再入力</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="add_fingerprint">Add fingerprint</string>
+    <string name="place_finger">Please place your finger on the fingerprint sensor</string>
+    <string name="authentication_failed">Authentication failed</string>
+    <string name="authentication_blocked">Authentication blocked, please try again in a moment</string>
+    <string name="no_fingerprints_registered">You have no fingerprints registered, please add some in the Settings of your device</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="protection_setup_successfully">パスワードの設定が完了しました。パスワードを紛失した場合は、アプリを再インストールしてください</string>
+    <string name="fingerprint_setup_successfully">Protection setup successfully. Please reinstall the app in case of problems with reseting it.</string>
+
+    <!-- Times -->
+    <plurals name="seconds">
+        <item quantity="one">%1$d秒</item>
+        <item quantity="other">%1$d秒</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d分</item>
+        <item quantity="other">%1$d分</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d時間</item>
+        <item quantity="other">%1$d時間</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="settings">設定</string>
+    <string name="customize_colors">表示色のカスタマイズ</string>
+    <string name="use_english_language">Use english language</string>
+    <string name="show_hidden">非表示のファイルとディレクトリーを表示する</string>
+    <string name="font_size">メモのフォントサイズ</string>
+    <string name="small">小</string>
+    <string name="medium">通常</string>
+    <string name="large">大</string>
+    <string name="extra_large">特大</string>
+    <string name="password_protect_hidden_items">非表示にした項目をパスワードで保護する</string>
+    <string name="keep_last_modified">Keep old last-modified value at file copy/move/rename</string>
+
+    <!-- About -->
+    <string name="about">アプリについて</string>
+    <string name="website_label">もっとシンプルなアプリとソースコードは</string>
+    <string name="email_label">ご意見やご提案をお送りください</string>
+    <string name="more_apps_underlined"><u>他のアプリ</u></string>
+    <string name="third_party_licences_underlined"><u>サードパーティー ライセンス</u></string>
+    <string name="invite_friends_underlined"><u>友達を招待</u></string>
+    <string name="share_text">%2$s で %1$s を確認してください</string>
+    <string name="invite_via">招待&#8230;</string>
+    <string name="rate_us_underlined"><u>Play ストアで評価してください</u></string>
+    <string name="donate">寄付</string>
+    <string name="donate_underlined"><u>寄付</u></string>
+    <string name="follow_us">フォローしてください</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">追加情報</string>
+    <string name="gruveo">登録不要のビデオ通話アプリをお探しですか? 私のアプリを試してみてください</string>
+    <string name="app_version">アプリバージョン: %1$s</string>
+    <string name="device_os">デバイスOS: %1$s</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
+
+    <!-- License -->
+    <string name="notice">このアプリは、私の暮らしにゆとりを持たせるために、次のサードパーティのライブラリーを使用しています。 ありがとうございます。</string>
+    <string name="third_party_licences">サードパーティー ライセンス</string>
+    <string name="kotlin_title">Kotlin (プログラミング言語)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (ズーム可能画像ビュー)</string>
+    <string name="glide_title">Glide (画像ローディングとキャッシング)</string>
+    <string name="picasso_title">Picasso (画像ローディングとキャッシング)</string>
+    <string name="cropper_title">Android Image Cropper (画像のトリミングと回転)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (複数選択リストアイテム)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (右から左へのスワイプ)</string>
+    <string name="joda_title">Joda-Time (Java date代替)</string>
+    <string name="stetho_title">Stetho (データベースのデバッグ)</string>
+    <string name="otto_title">Otto (イベントバス)</string>
+    <string name="photoview_title">PhotoView (GIF画像のズーム表示)</string>
+    <string name="pattern_title">PatternLockView (パターン認証)</string>
+    <string name="reprint_title">Reprint (fingerprint protection)</string>
+    <string name="gif_drawable_title">Gif Drawable (loading GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+</resources>

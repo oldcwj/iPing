@@ -6,11 +6,12 @@ import android.support.v7.widget.Toolbar
 import android.view.View
 import android.view.ViewGroup
 import com.gyf.barlibrary.ImmersionBar
+import com.wpapper.iping.R
 import com.wpapper.iping.base.annotation.AutoHideKeyboard
 import com.wpapper.iping.base.annotation.Backable
 import com.wpapper.iping.base.rx.RxActivity
 import com.wpapper.iping.ui.utils.KeyboardUtils
-import iping.wpapper.com.iping.R
+
 import org.jetbrains.anko.AnkoLogger
 import org.jetbrains.anko.contentView
 import org.jetbrains.anko.findOptional

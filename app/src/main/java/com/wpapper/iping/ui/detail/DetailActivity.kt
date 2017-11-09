@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import com.trello.rxlifecycle2.kotlin.bindToLifecycle
+import com.wpapper.iping.R
 import com.wpapper.iping.base.ui.BaseActivity
 import com.wpapper.iping.model.CmdParser
 import com.wpapper.iping.model.DataSave
@@ -15,7 +16,6 @@ import com.wpapper.iping.ui.utils.exts.subscribeNext
 import com.wpapper.iping.ui.utils.exts.subscribeOnComputation
 import com.wpapper.iping.ui.utils.exts.ui
 import io.reactivex.Observable
-import iping.wpapper.com.iping.R
 import com.wpapper.iping.base.annotation.Backable
 import com.wpapper.iping.ui.main.PieChartUtil
 import com.wpapper.iping.ui.setting.SettingServerActivity
@@ -83,6 +83,9 @@ class DetailActivity: BaseActivity() {
         Observable.create<Info> {
             val result = SSHManager.newInstance().ssh(sshInfo)
             val info = CmdParser.newInstance().parse(result)
+
+            //val result2 = SSHManager.newInstance().sshLs(sshInfo)
+
             it.onNext(info)
         }.subscribeOnComputation()
                 .ui()

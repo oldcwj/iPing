@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="iping.wpapper.com.iping">
+    package="com.wpapper.iping">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
 
     <application
@@ -25,6 +25,9 @@
             android:label="Edit"
             android:theme="@style/AnymeTheme.Light"/>
         <activity android:name="com.wpapper.iping.ui.detail.DetailActivity"
+            android:theme="@style/AnymeTheme.Light"/>
+        <activity android:name="com.wpapper.iping.ui.folder.FolderActivity"
+            android:label="Folder"
             android:theme="@style/AnymeTheme.Light"/>
     </application>
 

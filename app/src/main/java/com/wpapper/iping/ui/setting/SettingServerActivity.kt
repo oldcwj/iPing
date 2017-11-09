@@ -6,12 +6,12 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
+import com.wpapper.iping.R
 import com.wpapper.iping.base.annotation.AutoHideKeyboard
 import com.wpapper.iping.base.annotation.Backable
 import com.wpapper.iping.base.ui.BaseActivity
 import com.wpapper.iping.model.DataSave
 import com.wpapper.iping.model.SshInfo
-import iping.wpapper.com.iping.R
 import kotlinx.android.synthetic.main.content_edit_server.*
 
 /**

@@ -4,7 +4,7 @@ import android.app.Dialog
 import android.content.Context
 import android.view.Gravity
 import android.widget.TextView
-import iping.wpapper.com.iping.R
+import com.wpapper.iping.R
 
 
 internal class SimpleHUDDialog(context: Context, theme: Int) : Dialog(context, theme) {

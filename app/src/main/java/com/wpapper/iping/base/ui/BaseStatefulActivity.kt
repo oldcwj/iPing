@@ -1,7 +1,8 @@
 package com.wpapper.iping.base.ui
 
 import android.support.annotation.CallSuper
-import iping.wpapper.com.iping.R
+import com.wpapper.iping.R
+
 import org.jetbrains.anko.find
 
 

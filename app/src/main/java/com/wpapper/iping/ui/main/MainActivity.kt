@@ -4,15 +4,15 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
+import com.wpapper.iping.R
 import com.wpapper.iping.base.annotation.AutoHideKeyboard
 import com.wpapper.iping.base.ui.BaseActivity
-import com.wpapper.iping.ui.detail.DetailActivity
 import com.wpapper.iping.model.DataSave
 
-import iping.wpapper.com.iping.R
 import kotlinx.android.synthetic.main.activity_main.*
 
 import com.wpapper.iping.model.SshInfo
+import com.wpapper.iping.ui.folder.FolderActivity
 import com.wpapper.iping.ui.setting.SettingServerActivity
 import net.idik.lib.slimadapter.SlimAdapter
 import pieChart
@@ -30,7 +30,8 @@ class MainActivity : BaseActivity() {
                 .register<SshInfo>(R.layout.activity_main_item) { info, injector ->
                     injector.pieChart(R.id.layout, info, this@MainActivity)
                             .clicked(R.id.layout) {
-                                DetailActivity.start(this@MainActivity, info.host)
+                                //DetailActivity.start(this@MainActivity, info.host)
+                                FolderActivity.start(this@MainActivity, info.host)
                             }
                 }
     }

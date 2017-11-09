@@ -1,8 +1,7 @@
 package com.wpapper.iping.ui.utils
 
 import android.util.Log
-
-import iping.wpapper.com.iping.BuildConfig
+import com.wpapper.iping.BuildConfig
 
 
 object L {

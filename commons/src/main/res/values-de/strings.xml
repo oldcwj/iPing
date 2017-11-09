@@ -1,0 +1,256 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="search">Suchen</string>
+    <string name="save_as">Speichern unter</string>
+    <string name="file_saved">Datei erfolgreich gespeichert</string>
+    <string name="invalid_file_format">Ungültiges Dateiformat</string>
+    <string name="out_of_memory_error">Fehler: Zuwenig Speicher</string>
+    <string name="an_error_occurred">Es ist ein Fehler aufgetreten: %s</string>
+    <string name="open_with">Öffnen mit</string>
+    <string name="no_app_found">Keine passende App gefunden</string>
+    <string name="set_as">Festlegen als</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">Datei umbenennen</string>
+    <string name="rename_folder">Ordner umbenennen</string>
+    <string name="rename_file_error">Konnte die Datei nicht umbenennen</string>
+    <string name="rename_folder_error">Konnte den Ordner nicht umbenennen</string>
+    <string name="rename_folder_empty">Ordnername darf nicht leer sein</string>
+    <string name="rename_folder_exists">Ein Ordner mit diesem Namen existiert bereits</string>
+    <string name="rename_folder_root">Root-Ordner des Speichers kann nicht umbenannt werden</string>
+    <string name="rename_folder_ok">Ordner erfolgreich umbenannt</string>
+    <string name="renaming_folder">Ordner umbennenen</string>
+    <string name="filename_cannot_be_empty">Dateiname darf nicht leer sein</string>
+    <string name="filename_invalid_characters">Dateiname enthält ungültige Zeichen</string>
+    <string name="extension_cannot_be_empty">Dateiendung darf nicht leer sein</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Kopieren</string>
+    <string name="move">Verschieben</string>
+    <string name="copy_move">Kopieren / Verschieben</string>
+    <string name="copy_to">Kopieren nach</string>
+    <string name="move_to">Verschieben nach</string>
+    <string name="source">Quelle</string>
+    <string name="destination">Ziel</string>
+    <string name="select_destination">Ziel auswählen</string>
+    <string name="click_select_destination">Klicken um Ziel auszuwählen</string>
+    <string name="invalid_destination">Konnte nicht auf ausgewähltes Ziel schreiben</string>
+    <string name="please_select_destination">Bitte Ziel auswählen</string>
+    <string name="source_and_destination_same">Quell- und Zielpfad sind identisch</string>
+    <string name="copy_failed">Konnte die Datei nicht kopieren</string>
+    <string name="copying">Kopiere&#8230;</string>
+    <string name="copying_success">Dateien erfolgreich kopiert</string>
+    <string name="copy_move_failed">Es ist ein Fehler aufgetreten</string>
+    <string name="moving">Verschiebe&#8230;</string>
+    <string name="moving_success">Dateien erfolgreich verschoben</string>
+    <string name="moving_success_partial">Einige Dateien konnten nicht verschoben werden</string>
+    <string name="copying_success_partial">Einige Dateien konnten nicht kopiert werden</string>
+    <string name="no_files_selected">Keine Dateien ausgewählt</string>
+    <string name="saving">Speichere&#8230;</string>
+    <string name="could_not_create_folder">Ordner %s konnte nicht erstellt werden</string>
+    <string name="could_not_create_file">Datei %s konnte nicht erstellt werden</string>
+
+    <!-- Create new -->
+    <string name="create_new">Neuer Ordner</string>
+    <string name="folder">Ordner</string>
+    <string name="file">Datei</string>
+    <string name="create_new_folder">Neuen Ordner erstellen</string>
+    <string name="name_taken">Ordner oder Datei mit diesem Namen existiert bereits</string>
+    <string name="invalid_name">Der Name enthält nicht erlaubte Zeichen</string>
+    <string name="empty_name">Bitte einen Namen angeben</string>
+    <string name="unknown_error_occurred">Ein unbekannter Fehler ist aufgetreten</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">Datei %1$s existiert bereits</string>
+    <string name="file_already_exists_overwrite">Datei %1$s existiert bereits. Überschreiben?</string>
+    <string name="select_an_action">Aktion auswählen</string>
+    <string name="overwrite">Überschreiben</string>
+    <string name="skip">Überspringen</string>
+    <string name="append">\'_1\' anhängen</string>
+    <string name="apply_to_all">Bei allen Konflikten anwenden</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Ordner auswählen</string>
+    <string name="select_file">Datei auswählen</string>
+    <string name="confirm_storage_access_title">Bitte Zugriff auf externen Speicher bestätigen</string>
+    <string name="confirm_storage_access_text">Bitte am nächsten Bildschirm das Hauptverzeichnis deiner SD-Karte auswählen, um Schreibzugriff zu erlauben</string>
+    <string name="confirm_storage_access_text_sd">Wenn die SD-Karte nicht angezeigt wird, versuche das</string>
+    <string name="confirm_selection">Auswahl bestätigen</string>
+
+    <plurals name="items">
+        <item quantity="one">%1$d Element</item>
+        <item quantity="other">%1$d Elemente</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Speicher auswählen</string>
+    <string name="internal">Intern</string>
+    <string name="sd_card">SD-Karte</string>
+    <string name="root">Hauptverzeichnis</string>
+    <string name="wrong_root_selected">Falscher Ordner ausgewählt, bitte Hauptverzeichnis der SD-Karte auswählen</string>
+
+    <!-- File properties -->
+    <string name="properties">Eigenschaften</string>
+    <string name="path">Pfad</string>
+    <string name="items_selected">Ausgewählte Elemente</string>
+    <string name="direct_children_count">Enthaltene Elemente (direkt)</string>
+    <string name="files_count">Enthaltene Dateien (gesamt)</string>
+    <string name="resolution">Auflösung</string>
+    <string name="duration">Dauer</string>
+    <string name="artist">Künstler</string>
+    <string name="album">Album</string>
+    <string name="focal_length">Brennweite</string>
+    <string name="exposure_time">Belichtungszeit</string>
+    <string name="iso_speed">Filmempfindlichkeit</string>
+    <string name="f_number">Blendenzahl</string>
+    <string name="camera">Kamera</string>
+    <string name="exif">EXIF</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Hintergrundfarbe</string>
+    <string name="text_color">Schriftfarbe</string>
+    <string name="primary_color">Primäre Farbe</string>
+    <string name="restore_defaults">Standard wiederherstellen</string>
+    <string name="theme">Thema</string>
+    <string name="light_theme">Helles Thema</string>
+    <string name="dark_theme">Dunkles Thema</string>
+    <string name="custom">Benutzerdefiniert</string>
+    <string name="changing_color_description">Ändern einer Farbe setzt das Thema auf "Benutzerdefiniert"</string>
+    <string name="save">Speichern</string>
+    <string name="discard">Verwerfen</string>
+    <string name="undo_changes">Änderungen verwerfen</string>
+    <string name="undo_changes_confirmation">Bist du sicher, dass du die Änderungen verwerfen willst?</string>
+    <string name="save_before_closing">Du hast ungespeicherte Änderungen. Speichern vorm Beenden?</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Neue Funktionen</string>
+    <string name="whats_new_disclaimer">* Kleinere Verbesserungen werden nicht gelistet</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Löschen</string>
+    <string name="rename">Umbenennen</string>
+    <string name="share">Teilen</string>
+    <string name="share_via">Teilen via</string>
+    <string name="select_all">Alle auswählen</string>
+    <string name="hide">Verstecken</string>
+    <string name="unhide">Nicht verstecken</string>
+    <string name="hide_folder">Ordner verstecken</string>
+    <string name="unhide_folder">Ordner nicht verstecken</string>
+    <string name="temporarily_show_hidden">Verstecktes kurzzeitig zeigen</string>
+    <string name="stop_showing_hidden">Verstecktes wieder verbergen</string>
+    <string name="maximum_share_reached">So viel Inhalt kann nicht auf einmal geteilt werden</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Sortieren nach</string>
+    <string name="name">Name</string>
+    <string name="size">Größe</string>
+    <string name="last_modified">Änderungsdatum</string>
+    <string name="date_taken">Aufnahmedatum</string>
+    <string name="title">Titel</string>
+    <string name="filename">Dateiname</string>
+    <string name="extension">Dateiendung</string>
+    <string name="ascending">Aufsteigend</string>
+    <string name="descending">Absteigend</string>
+    <string name="use_for_this_folder">Nur für diesen Ordner verwenden</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Willst du mit dem Löschen fortfahren?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+
+    <!-- Password protection -->
+    <string name="pin">PIN</string>
+    <string name="enter_pin">PIN eingeben</string>
+    <string name="please_enter_pin">Bitte eine PIN eingeben</string>
+    <string name="wrong_pin">Falsche PIN</string>
+    <string name="repeat_pin">PIN wiederholen</string>
+    <string name="pattern">Muster</string>
+    <string name="insert_pattern">Muster zeichnen</string>
+    <string name="wrong_pattern">Falsches Muster</string>
+    <string name="repeat_pattern">Muster wiederholen</string>
+    <string name="fingerprint">Fingerprint</string>
+    <string name="add_fingerprint">Fingerabdruck hinzufügen</string>
+    <string name="place_finger">Bitte den Finger auf den Fingerabdruck-Sensor legen</string>
+    <string name="authentication_failed">Authentifizierung fehlgeschlagen</string>
+    <string name="authentication_blocked">Authentifizierung blockiert, bitte in Kürze erneut versuchen</string>
+    <string name="no_fingerprints_registered">Keine Fingerabdrücke registriert, bitte in den Geräteeinstellungen hinzufügen</string>
+    <string name="go_to_settings">Einstellungen öffnen</string>
+    <string name="protection_setup_successfully">Muster/PIN erfolgreich gespeichert. Falls vergessen, muss die App neu installiert werden.</string>
+    <string name="fingerprint_setup_successfully">Schutz erfolgreich eingerichtet. Falls beim Zurücksetzen Probleme auftreten, bitte die App neu installieren.</string>
+
+    <!-- Times -->
+    <plurals name="seconds">
+        <item quantity="one">%1$d Sekunde</item>
+        <item quantity="other">%1$d Sekunden</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d Minute</item>
+        <item quantity="other">%1$d Minuten</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d Stunde</item>
+        <item quantity="other">%1$d Stunden</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="settings">Einstellungen</string>
+    <string name="customize_colors">Farben anpassen</string>
+    <string name="use_english_language">Use english language</string>
+    <string name="show_hidden">Versteckte Dateien/Ordner zeigen</string>
+    <string name="font_size">Schriftgröße</string>
+    <string name="small">Klein</string>
+    <string name="medium">Medium</string>
+    <string name="large">Groß</string>
+    <string name="extra_large">Sehr groß</string>
+    <string name="password_protect_hidden_items">Verstecktes mit Muster/PIN schützen</string>
+    <string name="keep_last_modified">Beim Kopieren/Verschieben/Umbenennen die alte Änderungszeit beibehalten</string>
+
+    <!-- About -->
+    <string name="about">Über</string>
+    <string name="website_label">Weitere schlichte Apps und Quellcode finden sich auf</string>
+    <string name="email_label">Vorschläge und Feedback bitte senden an</string>
+    <string name="more_apps_underlined"><u>Weitere Apps</u></string>
+    <string name="third_party_licences_underlined"><u>Drittanbieterlizenzen</u></string>
+    <string name="invite_friends_underlined"><u>Freunde einladen</u></string>
+    <string name="share_text">Hey, wirf mal einen Blick auf %1$s: %2$s</string>
+    <string name="invite_via">Einladen via</string>
+    <string name="rate_us_underlined"><u>Bewerte uns im Play Store</u></string>
+    <string name="donate">Spenden</string>
+    <string name="donate_underlined"><u>Spenden</u></string>
+    <string name="follow_us">Folge uns</string>
+    <string name="copyright">v %1$s\nCopyright © Simple Mobile Tools %2$d</string>
+    <string name="additional_info">Zusätliche Infos</string>
+    <string name="gruveo">Bist du auf der Suche nach einfachen und anonymen Videoanrufen? Probiere meine anderen Apps aus</string>
+    <string name="app_version">App Version: %1$s</string>
+    <string name="device_os">Betriebssystem: %1$s</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
+
+    <!-- License -->
+    <string name="notice">Diese App nutzt die folgenden Drittanbieterbilbiotheken, die mein Leben einfacher machen. Danke.</string>
+    <string name="third_party_licences">Drittanbieterlizenzen</string>
+    <string name="kotlin_title">Kotlin (Programmiersprache)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (Zoombare Bilder)</string>
+    <string name="glide_title">Glide (Bilder laden und zwischenspeichern)</string>
+    <string name="picasso_title">Picasso (Bilder laden und zwischenspeichern)</string>
+    <string name="cropper_title">Android Image Cropper (Bilder zuschneiden und rotieren)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (Mehrfachauswahl in Listen)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (Rechts-Links-Swipen)</string>
+    <string name="joda_title">Joda-Time (Ersatz für Datums-Implementierung in Java)</string>
+    <string name="stetho_title">Stetho (Datenbanken debuggen)</string>
+    <string name="otto_title">Otto (Event Bus)</string>
+    <string name="photoview_title">PhotoView (Zoombare GIFs)</string>
+    <string name="pattern_title">PatternLockView (Schutz mit Muster)</string>
+    <string name="reprint_title">Reprint (Schutz mit Fingerabdruck)</string>
+    <string name="gif_drawable_title">Gif Drawable (Laden von GIFs)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+</resources>

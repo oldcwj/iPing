@@ -4,8 +4,8 @@ package com.wpapper.iping.ui.utils
  * Created by oldcwj@gmail.com on 2017/9/25.
  */
 import android.app.Activity
+import com.wpapper.iping.R
 import com.wpapper.iping.ui.utils.hub.SimpleHUD
-import iping.wpapper.com.iping.R
 
 
 object T {

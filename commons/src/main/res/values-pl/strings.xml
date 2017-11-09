@@ -1,0 +1,260 @@
+<resources>
+    <string name="ok">OK</string>
+    <string name="cancel">Anuluj</string>
+    <string name="search">Szukaj</string>
+    <string name="save_as">Zapisz jako&#8230;</string>
+    <string name="file_saved">Plik został zapisany</string>
+    <string name="invalid_file_format">Nieprawidłowy format pliku</string>
+    <string name="out_of_memory_error">Błąd pamięci</string>
+    <string name="an_error_occurred">Wystąpił błąd: %s</string>
+    <string name="open_with">Otwórz w</string>
+    <string name="no_app_found">Nie znaleziono danych aplikacji</string>
+    <string name="set_as">Ustaw jako</string>
+
+    <!-- Permissions -->
+    <string name="no_storage_permissions">Storage permission is required</string>
+    <string name="no_contacts_permission">Contacts permission is required</string>
+    <string name="no_camera_permissions">Camera permission is required</string>
+    <string name="no_audio_permissions">Audio permission is required</string>
+
+    <!-- Renaming -->
+    <string name="rename_file">Zmień nazwę</string>
+    <string name="rename_folder">Zmień nazwę folderu</string>
+    <string name="rename_file_error">Nie mogę zmienić nazwy pliku</string>
+    <string name="rename_folder_error">Nie mogę zmienić nazwy folderu</string>
+    <string name="rename_folder_empty">Nazwa folderu nie może być pusta</string>
+    <string name="rename_folder_exists">Folder o tej nazwie już istnieje</string>
+    <string name="rename_folder_root">Nie mogę zmienić nazwy folderu głównego</string>
+    <string name="rename_folder_ok">Zmieniono nazwę folderu</string>
+    <string name="renaming_folder">Zmieniam nazwę folderu&#8230;</string>
+    <string name="filename_cannot_be_empty">Nazwa pliku nie może być pusta</string>
+    <string name="filename_invalid_characters">Nazwa pliku zawiera niedozwolone znaki</string>
+    <string name="extension_cannot_be_empty">Rozszerzenie pliku nie może być puste</string>
+
+    <!-- Copy / Move -->
+    <string name="copy">Kopiuj</string>
+    <string name="move">Przenieś</string>
+    <string name="copy_move">Kopiuj / przenieś</string>
+    <string name="copy_to">Kopiuj do</string>
+    <string name="move_to">Przenieś do</string>
+    <string name="source">Żródło</string>
+    <string name="destination">Cel</string>
+    <string name="select_destination">Wybierz miejsce docelowe</string>
+    <string name="click_select_destination">Kliknij tutaj, aby wybrać miejsce docelowe</string>
+    <string name="invalid_destination">Nie można zapisać w tym miejscu</string>
+    <string name="please_select_destination">Wybierz miejsce docelowe</string>
+    <string name="source_and_destination_same">Miejsce żródłowe i docelowe nie może być takie samo</string>
+    <string name="copy_failed">Nie można skopiować pliku</string>
+    <string name="copying">Kopiuję&#8230;</string>
+    <string name="copying_success">Pliki zostały skopiowane</string>
+    <string name="copy_move_failed">Wystąpił błąd</string>
+    <string name="moving">Przenoszę&#8230;</string>
+    <string name="moving_success">Pliki zostały przeniesione</string>
+    <string name="moving_success_partial">Niektóre pliki nie mogą być przeniesione</string>
+    <string name="copying_success_partial">Niektóre pliki nie mogą być skopiowane</string>
+    <string name="no_files_selected">Nie wybrano żadnych plików</string>
+    <string name="saving">Zapsisuję&#8230;</string>
+    <string name="could_not_create_folder">Nie mogę utworzyć folderu %s</string>
+    <string name="could_not_create_file">Nie mogę utworzyć pliku %s</string>
+
+    <!-- Create new -->
+    <string name="create_new">Utwórz nowy</string>
+    <string name="folder">Folder</string>
+    <string name="file">Plik</string>
+    <string name="create_new_folder">Utwórz nowy folder</string>
+    <string name="name_taken">Folder lub plik o tej nazwie już istnieje</string>
+    <string name="invalid_name">Nazwa zawiera niedozwolone znaki</string>
+    <string name="empty_name">Wpisz nazwę</string>
+    <string name="unknown_error_occurred">Wystąpił nieznany błąd</string>
+
+    <!-- Copy conflicts -->
+    <string name="file_already_exists">Plik %1$s już istnieje</string>
+    <string name="file_already_exists_overwrite">Plik %1$s już istnieje. Nadpisać?</string>
+    <string name="select_an_action">Wybierz</string>
+    <string name="overwrite">Nadpisz</string>
+    <string name="skip">Pomiń</string>
+    <string name="append">Dodaj końcówkę \'_1\'</string>
+    <string name="apply_to_all">Zastosuj dla wszystkich</string>
+
+    <!-- File picker -->
+    <string name="select_folder">Wybierz folder</string>
+    <string name="select_file">Wybierz plik</string>
+    <string name="confirm_storage_access_title">Potwierdź dostęp do karty pamięci</string>
+    <string name="confirm_storage_access_text">Wybierz główny folder na karcie pamięci na następnym ekranie i udziel dostępu do zapisu</string>
+    <string name="confirm_storage_access_text_sd">Jeśli nie widzisz karty pamięci, spróbuj tego:</string>
+    <string name="confirm_selection">Potwierdź wybór</string>
+
+    <plurals name="items">
+        <item quantity="one">%1$d pozycja</item>
+        <item quantity="few">%1$d pozycje</item>
+        <item quantity="other">%1$d pozycji</item>
+    </plurals>
+
+    <!-- Storages -->
+    <string name="select_storage">Wybierz pamięć</string>
+    <string name="internal">Wewnętrzna</string>
+    <string name="sd_card">Karta pamięci</string>
+    <string name="root">Folder główny</string>
+    <string name="wrong_root_selected">Wybrano nieprawidłowy folder. Wybierz główny folder karty pamięci.</string>
+
+    <!-- File properties -->
+    <string name="properties">Właściwości</string>
+    <string name="path">Ścieżka</string>
+    <string name="items_selected">Wybrane pozycje</string>
+    <string name="direct_children_count">Ilość podfolderów</string>
+    <string name="files_count">Ilość wszystkich plików</string>
+    <string name="resolution">Rozdzielczość</string>
+    <string name="duration">Czas trwania</string>
+    <string name="artist">Artysta</string>
+    <string name="album">Album</string>
+    <string name="focal_length">Długość ogniskowa</string>
+    <string name="exposure_time">Czas ekspozycji</string>
+    <string name="iso_speed">Czułość ISO</string>
+    <string name="f_number">Otwór względny obiektywu</string>
+    <string name="camera">Kamera/aparat</string>
+    <string name="exif">Dane EXIF</string>
+
+    <!-- Color customization -->
+    <string name="background_color">Tło</string>
+    <string name="text_color">Tekst</string>
+    <string name="primary_color">Belka i przełączniki</string>
+    <string name="restore_defaults">Przywróć domyślne</string>
+    <string name="theme">Motyw</string>
+    <string name="light_theme">Jasny</string>
+    <string name="dark_theme">Ciemny</string>
+    <string name="custom">Własny</string>
+    <string name="changing_color_description">Zmiana koloru spowoduje przełączenie motywu na własny</string>
+    <string name="save">Zapisz</string>
+    <string name="discard">Porzuć</string>
+    <string name="undo_changes">Cofnij zmiany</string>
+    <string name="undo_changes_confirmation">Czy na pewno chcesz cofnąć zmiany?</string>
+    <string name="save_before_closing">Zapisać zmiany?</string>
+
+    <!-- What's new -->
+    <string name="whats_new">Co nowego</string>
+    <string name="whats_new_disclaimer">* Wymienione są tylko większe zmiany</string>
+
+    <!-- Actionbar items -->
+    <string name="delete">Usuń</string>
+    <string name="rename">Zmień nazwę</string>
+    <string name="share">Udostępnij</string>
+    <string name="share_via">Udostępnij w</string>
+    <string name="select_all">Zaznacz wszystko</string>
+    <string name="hide">Ukryj</string>
+    <string name="unhide">Odkryj</string>
+    <string name="hide_folder">Ukryj folder</string>
+    <string name="unhide_folder">Odkryj folder</string>
+    <string name="temporarily_show_hidden">Tymczasowo pokaż ukryte multimedia</string>
+    <string name="stop_showing_hidden">Przestań pokazywać ukryte multimedia</string>
+    <string name="maximum_share_reached">Nie możesz udostępniać tak wielu danych naraz</string>
+
+    <!-- Sorting -->
+    <string name="sort_by">Sortuj według parametru:</string>
+    <string name="name">Nazwa</string>
+    <string name="size">Rozmiar</string>
+    <string name="last_modified">Data modyfikacji</string>
+    <string name="date_taken">Data utworzenia</string>
+    <string name="title">Tytuł</string>
+    <string name="filename">Nazwa pliku</string>
+    <string name="extension">Rozszerzenie</string>
+    <string name="ascending">Rosnąco</string>
+    <string name="descending">Malejąco</string>
+    <string name="use_for_this_folder">Tylko w tym folderze</string>
+
+    <!-- Confirmation dialog -->
+    <string name="proceed_with_deletion">Czy na pewno chcesz to usunąć?</string>
+    <string name="yes">Tak</string>
+    <string name="no">Nie</string>
+
+    <!-- Password protection -->
+    <string name="pin">PIN</string>
+    <string name="enter_pin">Wprowadź PIN</string>
+    <string name="please_enter_pin">Wprowadź PIN</string>
+    <string name="wrong_pin">Nieprawidłowy PIN</string>
+    <string name="repeat_pin">Wprowadź PIN ponownie</string>
+    <string name="pattern">Wzór</string>
+    <string name="insert_pattern">Wprowadź wzór</string>
+    <string name="wrong_pattern">Nieprawidłowy wzór</string>
+    <string name="repeat_pattern">Wprowadź wzór ponownie</string>
+    <string name="fingerprint">Odcisk palca</string>
+    <string name="add_fingerprint">Dodaj odcisk palca</string>
+    <string name="place_finger">Przyłóż palec do czytnika</string>
+    <string name="authentication_failed">Uwierzytelnianie nie powiodło się.</string>
+    <string name="authentication_blocked"> Uwierzytelnianie zablokowane. Spróbuj ponownie za chwilę.</string>
+    <string name="no_fingerprints_registered">Nie masz zarejestrowanych odcisków palców. Dodaj je w ustawieniach systemowych.</string>
+    <string name="go_to_settings">Przejdź do ustawień</string>
+    <string name="protection_setup_successfully">Hasło zostało ustawione. Jeśli je zapomnisz, przeinstaluj aplikację.</string>
+    <string name="fingerprint_setup_successfully">Zabezpieczenie zostało ustawione. W razie problemów z jego zresetowaniem przeinstaluj aplikację.</string>
+
+    <!-- Times -->
+    <plurals name="seconds">
+        <item quantity="one">%1$d sekunda</item>
+        <item quantity="few">%1$d sekundy</item>
+        <item quantity="other">%1$d sekund</item>
+    </plurals>
+    <plurals name="minutes">
+        <item quantity="one">%1$d minuta</item>
+        <item quantity="few">%1$d minuty</item>
+        <item quantity="other">%1$d minut</item>
+    </plurals>
+    <plurals name="hours">
+        <item quantity="one">%1$d godzina</item>
+        <item quantity="few">%1$d godziny</item>
+        <item quantity="other">%1$d godzin</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="settings">Ustawienia</string>
+    <string name="customize_colors">Dostosuj kolory</string>
+    <string name="use_english_language">Use english language</string>
+    <string name="show_hidden">Pokazuj ukryte pliki i foldery</string>
+    <string name="font_size">Rozmiar czcionki</string>
+    <string name="small">Mała</string>
+    <string name="medium">Średnia</string>
+    <string name="large">Duża</string>
+    <string name="extra_large">Bardzo duża</string>
+    <string name="password_protect_hidden_items">Chroń widoczność ukrytych plików</string>
+    <string name="keep_last_modified">Zachowuj starą datę i czas modyfikacji przy kopiowaniu / przenoszeniu / zmianie nazwy plików</string>
+
+    <!-- About -->
+    <string name="about">O aplikacji</string>
+    <string name="website_label">Nasza strona internerowa:</string>
+    <string name="email_label">Napisz do nas, przyślij nam swoje uwagi:</string>
+    <string name="more_apps_underlined"><u>Więcej naszych aplikacji</u></string>
+    <string name="third_party_licences_underlined"><u>Licencje innych firm</u></string>
+    <string name="invite_friends_underlined"><u>Zaproponuj aplikację znajomym</u></string>
+    <string name="share_text">Hej! Sprawdź aplikację %1$s (link: %2$s).</string>
+    <string name="invite_via">Wybierz sposób:</string>
+    <string name="rate_us_underlined"><u>Oceń aplikację</u></string>
+    <string name="donate">Przekaż darowiznę</string>
+    <string name="donate_underlined"><u>Przekaż darowiznę</u></string>
+    <string name="follow_us">Śledź nas</string>
+    <string name="copyright">Wersja %1$s\n© Simple Mobile Tools %2$d</string>
+    <string name="additional_info">Dodatkowe informacje</string>
+    <string name="gruveo">Nie szukasz może prostej i anonimowej w swych działaniach aplikacji do wideorozmów? Wypróbuj mój inny projekt:</string>
+    <string name="app_version">Wersja aplikacji: %1$s</string>
+    <string name="device_os">System: %1$s</string>
+    <string name="donate_please">Hello,\n\nhope you are enjoying the app. It contains no ads, so please support its development by purchasing the <a href="https://play.google.com/store/apps/details?id=com.simplemobiletools.thankyou">Simple Thank You</a> app, it will also prevent this dialog from showing up again.\n\nYou can find more donating options <a href="http://simplemobiletools.com/donate">here</a>.\n\nThank you!</string>
+    <string name="purchase">Purchase</string>
+
+    <!-- License -->
+    <string name="notice">Aplikacja korzysta z następujących bibliotek innych firm:</string>
+    <string name="third_party_licences">Licencje innych firm</string>
+    <string name="kotlin_title">Kotlin (język programowania)</string>
+    <string name="subsampling_title">Subsampling Scale Image View (przybliżanie obrazów)</string>
+    <string name="glide_title">Glide (ładowanie obrazów i ich przechowywanie w pamięci podręcznej)</string>
+    <string name="picasso_title">Picasso (ładowanie obrazów i ich przechowywanie w pamięci podręcznej)</string>
+    <string name="cropper_title">Android Image Cropper (przycinanie i obracanie obrazów)</string>
+    <string name="multiselect_title">RecyclerView MultiSelect (wybieranie wielu elementów listy)</string>
+    <string name="rtl_viewpager_title">RtlViewPager (przeciąganie ekranu od prawej do lewej strony)</string>
+    <string name="joda_title">Joda-Time (podmienianie daty w języku Java)</string>
+    <string name="stetho_title">Stetho (bazy danych debugowania)</string>
+    <string name="otto_title">Otto (event bus)</string>
+    <string name="photoview_title">PhotoView (przybliżanie GIFów)</string>
+    <string name="pattern_title">PatternLockView (ochrona danych wzorem)</string>
+    <string name="reprint_title">Reprint (ochrona danych odciskiem palca)</string>
+    <string name="gif_drawable_title">Gif Drawable (ładowanie GIFów)</string>
+    <string name="autofittextview_title">AutoFitTextView (resizing text)</string>
+    <string name="robolectric_title">Robolectric (testing framework)</string>
+    <string name="espresso_title">Espresso (testing helper)</string>
+</resources>

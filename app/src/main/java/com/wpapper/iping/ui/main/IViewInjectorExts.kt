@@ -3,6 +3,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import com.github.mikephil.charting.charts.PieChart
 import com.trello.rxlifecycle2.kotlin.bindToLifecycle
+import com.wpapper.iping.R
 import com.wpapper.iping.base.rx.RxActivity
 import com.wpapper.iping.ui.main.PieChartUtil
 import com.wpapper.iping.model.CmdParser
@@ -13,7 +14,6 @@ import com.wpapper.iping.ui.utils.exts.subscribeNext
 import com.wpapper.iping.ui.utils.exts.subscribeOnComputation
 import com.wpapper.iping.ui.utils.exts.ui
 import io.reactivex.Observable
-import iping.wpapper.com.iping.R
 import net.idik.lib.slimadapter.viewinjector.IViewInjector
 
 fun IViewInjector<*>.pieChart(id: Int, sshInfo: SshInfo, context: RxActivity): IViewInjector<*> {
