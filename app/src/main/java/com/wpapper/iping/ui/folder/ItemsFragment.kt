@@ -86,9 +86,11 @@ class ItemsFragment : Fragment(), ItemsAdapter.ItemOperationsListener, Breadcrum
 
     private fun storeConfigVariables() {
         storedTextColor = context.config.textColor
+
     }
 
     fun openPath(path: String) {
+        val isRemote = (activity as FolderActivity).isRemote
         if (!isAdded) {
             return
         }
@@ -104,7 +106,7 @@ class ItemsFragment : Fragment(), ItemsAdapter.ItemOperationsListener, Breadcrum
         scrollStates.put(currentPath, getScrollState())
         currentPath = realPath
         showHidden = context.config.shouldShowHidden
-        getItems(currentPath) {
+        getItems(currentPath, isRemote) {
             if (!isAdded)
                 return@getItems
 
@@ -183,20 +185,24 @@ class ItemsFragment : Fragment(), ItemsAdapter.ItemOperationsListener, Breadcrum
 
     private fun getRecyclerLayoutManager() = (mView.items_list.layoutManager as LinearLayoutManager)
 
-    private fun getItems(path: String, callback: (items: ArrayList<FileDirItem>) -> Unit) {
+    private fun getItems(path: String, isRemote: Boolean = true, callback: (items: ArrayList<FileDirItem>) -> Unit) {
         Thread({
-            /*
-            if (!context.config.enableRootAccess || !context.isPathOnRoot(path)) {
+            if (!isRemote) {
+//                if (!context.config.enableRootAccess || !context.isPathOnRoot(path)) {
+//                    getRegularItemsOf(path, callback)
+//                } else {
+//                    RootHelpers().getFiles(activity as SimpleActivity, path, callback)
+//                }
                 getRegularItemsOf(path, callback)
             } else {
-                RootHelpers().getFiles(activity as SimpleActivity, path, callback)
+                Log.i("path=====", path)
+                host = (activity as FolderActivity).host
+                var sshInfo = DataSave(activity).getData(host)
+                if (sshInfo != null) {
+                    callback(SSHManager.newInstance().sshLs(sshInfo, path))
+                }
             }
-            */
-            Log.i("path=====", path)
-            var sshInfo = DataSave(activity).getData(host)
-            if (sshInfo != null) {
-                callback(SSHManager.newInstance().sshLs(sshInfo, path))
-            }
+
         }).start()
     }
 
@@ -257,8 +263,11 @@ class ItemsFragment : Fragment(), ItemsAdapter.ItemOperationsListener, Breadcrum
     override fun breadcrumbClicked(id: Int) {
         if (id == 0) {
             StoragePickerDialog(activity, currentPath) {
-                openPath(it)
+                index, path ->
+                (activity as FolderActivity).isRemote = index != 0
+                openPath(path)
             }
+
         } else {
             val item = breadcrumbs.getChildAt(id).tag as FileDirItem
             openPath(item.path)

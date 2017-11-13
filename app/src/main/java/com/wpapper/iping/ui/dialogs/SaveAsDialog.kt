@@ -4,7 +4,6 @@ import android.support.v7.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.WindowManager
 import com.simplemobiletools.commons.dialogs.ConfirmationDialog
-import com.simplemobiletools.commons.dialogs.FilePickerDialog
 import com.simplemobiletools.commons.extensions.*
 import com.wpapper.iping.R
 import com.wpapper.iping.ui.folder.SimpleActivity

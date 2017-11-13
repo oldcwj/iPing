@@ -43,6 +43,8 @@ class FolderActivity : SimpleActivity() {
     @JvmField
     var host: String = ""
 
+    var isRemote = true;
+
     private lateinit var fragment: ItemsFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {

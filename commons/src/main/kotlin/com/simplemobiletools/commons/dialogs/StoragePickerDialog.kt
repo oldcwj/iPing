@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.dialog_radio_group.view.*
  * @param callback an anonymous function
  *
  */
-class StoragePickerDialog(val context: Context, currPath: String, val callback: (pickedPath: String) -> Unit) {
+class StoragePickerDialog(val context: Context, currPath: String, val callback: (index: Int, pickedPath: String) -> Unit) {
     var mDialog: AlertDialog
 
     init {
@@ -63,16 +63,16 @@ class StoragePickerDialog(val context: Context, currPath: String, val callback: 
 
     private fun internalPicked() {
         mDialog.dismiss()
-        callback(context.internalStoragePath)
+        callback(0, context.internalStoragePath)
     }
 
     private fun sdPicked() {
         mDialog.dismiss()
-        callback(context.sdCardPath)
+        callback(1, context.sdCardPath)
     }
 
     private fun rootPicked() {
         mDialog.dismiss()
-        callback("/")
+        callback(2, "/")
     }
 }

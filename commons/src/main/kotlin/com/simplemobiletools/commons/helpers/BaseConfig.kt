@@ -36,6 +36,10 @@ open class BaseConfig(val context: Context) {
         get() = prefs.getInt(TEXT_COLOR, context.resources.getColor(R.color.default_text_color))
         set(textColor) = prefs.edit().putInt(TEXT_COLOR, textColor).apply()
 
+    var isRemote: Boolean
+        get() = prefs.getBoolean(IS_REMOTE, true)
+        set(isRemote) = prefs.edit().putBoolean(IS_REMOTE, isRemote).apply()
+
     var backgroundColor: Int
         get() = prefs.getInt(BACKGROUND_COLOR, context.resources.getColor(R.color.default_background_color))
         set(backgroundColor) = prefs.edit().putInt(BACKGROUND_COLOR, backgroundColor).apply()

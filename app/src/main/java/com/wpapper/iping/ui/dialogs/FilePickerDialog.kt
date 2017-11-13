@@ -1,24 +1,31 @@
-package com.simplemobiletools.commons.dialogs
+package com.wpapper.iping.ui.dialogs
 
 import android.os.Environment
 import android.os.Parcelable
 import android.support.v7.app.AlertDialog
 import android.support.v7.widget.DividerItemDecoration
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import android.view.KeyEvent
 import android.view.LayoutInflater
-import com.simplemobiletools.commons.R
 import com.simplemobiletools.commons.activities.BaseSimpleActivity
 import com.simplemobiletools.commons.adapters.FilepickerItemsAdapter
+import com.simplemobiletools.commons.dialogs.CreateNewFolderDialog
+import com.simplemobiletools.commons.dialogs.StoragePickerDialog
 import com.simplemobiletools.commons.extensions.beVisible
 import com.simplemobiletools.commons.extensions.getFilenameFromPath
 import com.simplemobiletools.commons.extensions.internalStoragePath
 import com.simplemobiletools.commons.extensions.setupDialogStuff
 import com.simplemobiletools.commons.models.FileDirItem
 import com.simplemobiletools.commons.views.Breadcrumbs
+import com.wpapper.iping.R
+import com.wpapper.iping.model.DataSave
+import com.wpapper.iping.ui.folder.FolderActivity
+import com.wpapper.iping.ui.utils.SSHManager
 import kotlinx.android.synthetic.main.dialog_filepicker.view.*
 import java.io.File
-import java.util.*
+import java.util.ArrayList
+import java.util.HashMap
 
 /**
  * The only filepicker constructor with a couple optional parameters
@@ -142,6 +149,42 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
         mPrevPath = currPath
     }
 
+
+    private fun getItems(path: String, isRemote: Boolean = true, callback: (items: ArrayList<FileDirItem>) -> Unit) {
+        Thread({
+            if (!isRemote) {
+                getRegularItemsOf(path, callback)
+            } else {
+                Log.i("path=====", path)
+                var host = (activity as FolderActivity).host
+                var sshInfo = DataSave(activity).getData(host)
+                if (sshInfo != null) {
+                    callback(SSHManager.newInstance().sshLs(sshInfo, path))
+                }
+            }
+
+        }).start()
+    }
+
+    private fun getRegularItemsOf(path: String, callback: (items: ArrayList<FileDirItem>) -> Unit) {
+        val items = ArrayList<FileDirItem>()
+        val files = File(path).listFiles()
+        if (files != null) {
+            for (file in files) {
+                val curPath = file.absolutePath
+                val curName = curPath.getFilenameFromPath()
+                if (!showHidden && curName.startsWith("."))
+                    continue
+
+                val children = getChildren(file)
+                val size = file.length()
+
+                items.add(FileDirItem(curPath, curName, file.isDirectory, children, size))
+            }
+        }
+        callback(items)
+    }
+
     private fun verifyPath() {
         val file = File(currPath)
         if ((pickFile && file.isFile) || (!pickFile && file.isDirectory)) {
@@ -183,8 +226,8 @@ class FilePickerDialog(val activity: BaseSimpleActivity,
 
     override fun breadcrumbClicked(id: Int) {
         if (id == 0) {
-            StoragePickerDialog(activity, currPath) {
-                currPath = it
+            StoragePickerDialog(activity, currPath) { index, path ->
+                currPath = path
                 updateItems()
             }
         } else {

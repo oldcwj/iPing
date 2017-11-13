@@ -3,7 +3,6 @@ package com.wpapper.iping.ui.dialogs
 import android.support.v7.app.AlertDialog
 import android.view.View
 import android.view.WindowManager
-import com.simplemobiletools.commons.dialogs.FilePickerDialog
 import com.simplemobiletools.commons.extensions.*
 import com.wpapper.iping.R
 import com.wpapper.iping.ui.folder.SimpleActivity
