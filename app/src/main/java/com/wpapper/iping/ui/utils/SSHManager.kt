@@ -2,14 +2,17 @@ package com.wpapper.iping.ui.utils
 
 import android.text.TextUtils
 import android.util.Log
+import com.simplemobiletools.commons.extensions.formatSize
 import com.simplemobiletools.commons.models.FileDirItem
 import com.wpapper.iping.model.SshInfo
 import net.schmizz.sshj.AndroidConfig
 import net.schmizz.sshj.SSHClient
 import net.schmizz.sshj.common.IOUtils
+import net.schmizz.sshj.common.StreamCopier
 import net.schmizz.sshj.transport.verification.PromiscuousVerifier
 import java.util.concurrent.TimeUnit
 import net.schmizz.sshj.xfer.FileSystemFile
+import net.schmizz.sshj.xfer.TransferListener
 import java.util.ArrayList
 
 /**
@@ -129,7 +132,20 @@ class SSHManager {
 
             remotePath.forEach {
                 Log.i("download", "it=" + it + ":localPaht=" + localPath)
-                ssh.newSCPFileTransfer().download(it, FileSystemFile(localPath));
+                val scpTransfer = ssh.newSCPFileTransfer()
+                scpTransfer.transferListener = object : TransferListener {
+                    override fun file(name: String?, size: Long): StreamCopier.Listener {
+                        return StreamCopier.Listener {
+                            Log.i("progress", "=" + it.formatSize())
+                        }
+                    }
+
+                    override fun directory(name: String?): TransferListener {
+                        return this
+                    }
+
+                }
+                scpTransfer.download(it, FileSystemFile(localPath));
             }
 
         } catch (e: Exception) {

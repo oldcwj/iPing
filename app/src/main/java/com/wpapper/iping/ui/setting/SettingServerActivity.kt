@@ -40,7 +40,7 @@ class SettingServerActivity : BaseActivity() {
         host = intent.getStringExtra(KEY_HOST)
 
         if (!host.isEmpty()) {
-            var sshInfo = DataSave(this@SettingServerActivity).getData(host)
+            val sshInfo = DataSave(this@SettingServerActivity).getData(host)
             if (sshInfo != null) {
                 nameTextView.setText(sshInfo.name)
                 hostTextView.setText(sshInfo.host)
