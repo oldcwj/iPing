@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit
 import net.schmizz.sshj.xfer.FileSystemFile
 import net.schmizz.sshj.xfer.TransferListener
 import java.util.ArrayList
+import java.util.concurrent.Callable
 
 /**
  * Created by oldcwj@gmail.com on 2017/9/26.
@@ -55,7 +56,7 @@ class SSHManager {
 
     fun sshLs(sshInfo: SshInfo, path: String): ArrayList<FileDirItem> {
         val ssh = SSHClient(AndroidConfig())
-        var value: String = "AA"
+        var value = "AA"
 
         val files = ArrayList<FileDirItem>()
 
@@ -123,20 +124,22 @@ class SSHManager {
         }
     }
 
-    fun scpDownload(sshInfo: SshInfo, localPath: String, remotePath: List<String>) {
+    fun scpDownload(sshInfo: SshInfo, localPath: String, remotePath: List<FileDirItem>,
+                    callback: ((Int, String, Long, Long) -> Unit)) {
         val ssh = SSHClient(AndroidConfig())
         try {
             ssh.addHostKeyVerifier(PromiscuousVerifier());
             ssh.connect(sshInfo.host, sshInfo.port)
             ssh.authPassword(sshInfo.username, sshInfo.password)
 
-            remotePath.forEach {
-                Log.i("download", "it=" + it + ":localPaht=" + localPath)
+            remotePath.forEachIndexed { index, fileDirItem ->
+                Log.i("download", "it=" + fileDirItem.path + ":localPaht=" + localPath)
                 val scpTransfer = ssh.newSCPFileTransfer()
                 scpTransfer.transferListener = object : TransferListener {
                     override fun file(name: String?, size: Long): StreamCopier.Listener {
                         return StreamCopier.Listener {
                             Log.i("progress", "=" + it.formatSize())
+                            callback(index, fileDirItem.name, fileDirItem.size, it)
                         }
                     }
 
@@ -145,7 +148,7 @@ class SSHManager {
                     }
 
                 }
-                scpTransfer.download(it, FileSystemFile(localPath));
+                scpTransfer.download(fileDirItem.path, FileSystemFile(localPath));
             }
 
         } catch (e: Exception) {

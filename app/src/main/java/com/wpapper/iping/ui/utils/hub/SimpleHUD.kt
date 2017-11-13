@@ -20,6 +20,10 @@ object SimpleHUD {
         }
     }
 
+    fun setMessage(context: Context, msg: String) {
+        dialog?.setMessage(msg)
+    }
+
     private fun setupDialog(ctx: Context, msg: String, cancelable: Boolean) {
         dialog = SimpleHUDDialog.createDialog(ctx)
         dialog!!.setMessage(msg)

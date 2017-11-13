@@ -33,6 +33,7 @@ import com.wpapper.iping.R
 import com.wpapper.iping.model.DataSave
 import com.wpapper.iping.ui.utils.SSHManager
 import com.wpapper.iping.ui.utils.exts.*
+import com.wpapper.iping.ui.utils.hub.SimpleHUD
 
 import kotlinx.android.synthetic.main.list_item.view.*
 import java.io.Closeable
@@ -222,15 +223,15 @@ class ItemsAdapter(val activity: SimpleActivity, var mItems: MutableList<FileDir
     }
 
     private fun copyMoveTo(isCopyOperation: Boolean) {
-        val files = ArrayList<File>()
-        val filesPath = ArrayList<String>()
-        selectedPositions.forEach { files.add(File(mItems[it].path)) }
-        selectedPositions.forEach { filesPath.add((mItems[it].path)) }
+        val files = ArrayList<FileDirItem>()
+        //val filesPath = ArrayList<String>()
+        selectedPositions.forEach { files.add(mItems[it]) }
+        //selectedPositions.forEach { filesPath.add((mItems[it].path)) }
 
         val source = Environment.getExternalStorageDirectory().toString()
         FilePickerDialog(activity, source, false, config.shouldShowHidden, true) {
             Log.i("source", source)
-            copyRootItemsScp(filesPath, it)
+            copyRootItemsScp(files, it)
         }
     }
 
@@ -257,10 +258,13 @@ class ItemsAdapter(val activity: SimpleActivity, var mItems: MutableList<FileDir
         }).start()
     }
 
-    private fun copyRootItemsScp(files: ArrayList<String>, destinationPath: String) {
-        activity.toast(R.string.copying)
+    private fun copyRootItemsScp(files: ArrayList<FileDirItem>, destinationPath: String) {
+        activity.runOnUiThread {
+            SimpleHUD.show(activity, R.string.copying, true)
+        }
         Thread({
             var fileCnt = files.count()
+            var indexTmp = 0
 
             var host = ""
             if (activity is FolderActivity) {
@@ -268,16 +272,25 @@ class ItemsAdapter(val activity: SimpleActivity, var mItems: MutableList<FileDir
             }
             var sshInfo = DataSave(activity).getData(host)
             if (sshInfo != null) {
-                SSHManager.newInstance().scpDownload(sshInfo, destinationPath, files)
+                SSHManager.newInstance().scpDownload(sshInfo, destinationPath, files, {
+                    index, name, size, progress ->
+                    indexTmp = index
+                    Log.i("progress", progress.formatSize() + "/" + size.formatSize())
+                    activity.runOnUiThread {
+                        SimpleHUD.setMessage(activity, progress.formatSize() + "/" + size.formatSize())
+                    }
+                })
             }
 
             when {
-                fileCnt <= 0 -> activity.toast(R.string.copying_success)
-                fileCnt == files.count() -> activity.toast(R.string.copy_failed)
+                fileCnt == (indexTmp + 1) -> activity.toast(R.string.copying_success)
+                indexTmp == 0 -> activity.toast(R.string.copy_failed)
                 else -> activity.toast(R.string.copying_success_partial)
             }
 
             activity.runOnUiThread {
+                SimpleHUD.dismiss()
+
                 listener?.refreshItems()
                 actMode?.finish()
             }

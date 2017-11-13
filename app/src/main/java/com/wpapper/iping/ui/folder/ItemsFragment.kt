@@ -27,6 +27,7 @@ import com.wpapper.iping.ui.utils.SSHManager
 import com.wpapper.iping.ui.utils.exts.config
 import com.wpapper.iping.ui.utils.exts.isPathOnRoot
 import com.wpapper.iping.ui.utils.exts.openFile
+import com.wpapper.iping.ui.utils.hub.SimpleHUD
 import kotlinx.android.synthetic.main.items_fragment.*
 import kotlinx.android.synthetic.main.items_fragment.view.*
 import java.io.File
@@ -92,6 +93,10 @@ class ItemsFragment : Fragment(), ItemsAdapter.ItemOperationsListener, Breadcrum
             return
         }
 
+        activity.runOnUiThread {
+            SimpleHUD.show(activity, "Loading", true)
+        }
+
         var realPath = path.trimEnd('/')
         if (realPath.isEmpty())
             realPath = "/"
@@ -106,6 +111,7 @@ class ItemsFragment : Fragment(), ItemsAdapter.ItemOperationsListener, Breadcrum
             FileDirItem.sorting = context.config.getFolderSorting(currentPath)
             it.sort()
             activity.runOnUiThread {
+                SimpleHUD.dismiss()
                 addItems(it)
             }
         }
